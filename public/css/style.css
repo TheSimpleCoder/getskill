@@ -1,0 +1,32 @@
+.load-file__content {
+    position: relative;
+}
+
+.dz-preview{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: calc(10% - 10px);
+    height: calc(100% - 20px);
+}
+
+.dz-image {
+    display: inline-block;
+}
+
+.dz-preview {
+    min-width: 15%;
+}
+
+.dz-image img {
+    width: 100%;
+}
+
+.dropzone .dz-preview .dz-image {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.dz-image img {
+    width: 100% !important;
+}
