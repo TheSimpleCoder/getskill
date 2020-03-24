@@ -1,0 +1,70 @@
+.like {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  color: $gray-color;
+  background-color: $gray-standard-color;
+  border-radius: 3px;
+
+  &:focus {
+    box-shadow: 0 0 0 0.2rem rgba($gray-hover-color, 0.25);
+  }
+}
+
+.like--active {
+  color: $red-color;
+  background-color: $pink-color-normal;
+
+  &:focus {
+    color: $red-color;
+    box-shadow: 0 0 0 0.2rem rgba($red-color, 0.25);
+  }
+}
+
+
+.like__count {
+  position: absolute;
+  font-size: 14px;
+  right: 6px;
+  bottom: 1px;
+  display: none;
+  color: $black-color;
+}
+
+.like--active .like__count {
+  display: block;
+}
+
+@media (min-width: $tablet-large) {
+  .like--header {
+    margin-left: auto;
+    order: 1;
+  }
+}
+
+@media (min-width: $laptop) {
+  .like {
+    &:hover {
+      color: rgba($gray-color, 0.6);
+    }
+
+    &:focus {
+      color: rgba($gray-color, 1);
+    }
+  }
+
+  .like--active {
+    &:hover {
+      color: rgba($red-color, 0.6);
+      box-shadow: 0 0 0 0.2rem rgba($pink-color, 0.25);
+    }
+
+    &:focus {
+      color: $red-color;
+      box-shadow: 0 0 0 0.2rem rgba($red-color, 0.25);
+    }
+  }
+}

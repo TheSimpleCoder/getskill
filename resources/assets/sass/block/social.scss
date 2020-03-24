@@ -1,0 +1,55 @@
+.social--footer {
+  max-width: 158px;
+  margin-top: 22px;
+}
+
+.social__list {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.social__link {
+  display: block;
+
+  &:focus {
+    opacity: 0.3;
+  }
+}
+
+.social__item {
+  margin-right: 19px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.social__title {
+  margin: 0 0 18px 0;
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 300;
+}
+
+@media (min-width: $tablet-large) {
+  .social--footer {
+    margin-top: 17px;
+  }
+}
+
+@media (min-width: $laptop) {
+  .social__link {
+    display: block;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:focus {
+      opacity: 0.3;
+    }
+  }
+}

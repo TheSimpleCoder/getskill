@@ -1,0 +1,16 @@
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: none;
+  background-color: rgba($black-color, 0.4);
+  z-index: 5;
+}
+
+@media (max-width: 991px) {
+  .overlay--open {
+    display: block;
+  }
+}

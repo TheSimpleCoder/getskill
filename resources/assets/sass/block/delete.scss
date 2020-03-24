@@ -1,0 +1,17 @@
+.delete {
+  padding: 0 9px;
+  background-color: transparent;
+  border: none;
+}
+
+.delete svg {
+  fill: $gray-lite-color;
+}
+
+.delete:focus {
+  outline: none;
+}
+
+.delete:focus svg {
+  fill: $black-color;
+}

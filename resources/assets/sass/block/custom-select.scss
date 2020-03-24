@@ -1,0 +1,134 @@
+.custom-select {
+  position: relative;
+}
+
+.custom-select__header {
+  position: relative;
+  padding: 8px 53px 4px 19px;
+  border: 1px solid $gray-color;
+  border-radius: 3px;
+}
+
+.custom-select__selected {
+  position: relative;
+  margin-bottom: 3px;
+  padding: 5px 24px 5px 5px;
+  font-size: 16px;
+  color: $black-color;
+  background-color: $gray-standard-color;
+  border: none;
+  border-radius: 3px;
+
+  &::before,
+  &::after {
+    content: " ";
+    position: absolute;
+    top: 6px;
+    right: 11px;
+    width: 1px;
+    height: 12px;
+    background-color: $black-color;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.custom-select__header .custom-select__selected:last-child {
+  margin-bottom: 0;
+}
+
+.custom-select__toggle-icon {
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  right: -1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33px;
+  background-color: transparent;
+  border: 1px solid $gray-color;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.custom-select__body {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  display: none;
+  padding: 20px 0;
+  background-color: $white-color;
+  border: 1px solid $gray-color;
+  border-top: none;
+}
+
+.custom-select__list {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.custom-select__option {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  text-align: left;
+  background-color: transparent;
+  border: none;
+}
+
+.custom-select__selected:focus {
+  opacity: 0.3;
+  outline: none;
+}
+
+.custom-select__header:focus {
+  outline: none;
+  border-color: $violet-dark-color;
+  box-shadow: 0 0 0 0.2rem rgba($violet-dark-color, 0.25);
+}
+
+.custom-select__header:focus .custom-select__toggle-icon {
+  border-color: $violet-dark-color;
+  box-shadow: 0 0 0 0.2rem rgba($violet-dark-color, 0.25);
+}
+
+@media (min-width: $laptop) {
+  .custom-select__selected {
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:focus {
+      opacity: 0.3;
+    }
+  }
+
+  .custom-select__header:hover .custom-select__toggle-icon {
+    border-color: $black-color;
+  }
+
+  .custom-select__header:focus .custom-select__toggle-icon {
+    border-color: $violet-dark-color;
+    box-shadow: 0 0 0 0.2rem rgba($violet-dark-color, 0.25);
+  }
+
+  .custom-select__header {
+    &:hover {
+      border-color: $black-color;
+    }
+
+    &:focus {
+      border-color: $violet-dark-color;
+      box-shadow: 0 0 0 0.2rem rgba($violet-dark-color, 0.25);
+    }
+  }
+}

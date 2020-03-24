@@ -1,0 +1,124 @@
+.navigation__inner--middle {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 20px;
+  padding-bottom: 27px;
+}
+
+.navigation__text {
+  display: none;
+}
+
+.navigation__user-wrapper,
+.navigation__wrapper-menu {
+  display: none;
+}
+
+.navigation__open-menu {
+  width: 45px;
+  height: 23px;
+  margin-top: 11px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.navigation__open-menu span {
+  position: relative;
+  display: block;
+  height: 3px;
+  margin-bottom: 6px;
+  background-color: $black-clear-color;
+  border-radius: 5px;
+
+  &:last-child {
+    width: 31px;
+    margin-bottom: 0;
+  }
+}
+
+.navigation__user-wrapper {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $gray-color;
+}
+
+@media (max-width: 991px) {
+  .navigation--no-js .navigation__open-menu {
+    display: none;
+  }
+
+  .navigation--no-js .logo--header {
+    display: none;
+  }
+
+  .navigation--no-js .like--header {
+    display: none;
+  }
+
+  .navigation--no-js .mobile-menu {
+    position: static;
+    max-width: 100%;
+    transform: none;
+  }
+}
+
+@media (min-width: $tablet-large) {
+  .navigation__open-menu {
+    display: none;
+  }
+
+  .navigation__inner--middle {
+    align-items: flex-start;
+    padding-top: 20px;
+    padding-bottom: 14px;
+  }
+
+  .navigation__wrapper-menu {
+    display: block;
+    background-color: #6f35a9;
+  }
+
+  .navigation__user--inner {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .navigation__user-wrapper {
+    display: block;
+  }
+}
+
+@media (min-width: $laptop) {
+  .navigation__text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 165px;
+    width: 100%;
+    margin-right: 28px;
+    padding-top: 5px;
+  }
+
+  .navigation__text p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .navigation__curse {
+    font-size: 28px;
+    font-weight: 500;
+    color: $black-color;
+  }
+
+  .navigation__count-curse {
+    font-weight: 300;
+    max-width: 85px;
+    line-height: 18px;
+  }
+}

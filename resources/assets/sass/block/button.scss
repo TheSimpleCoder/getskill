@@ -1,0 +1,184 @@
+.button {
+  display: inline-block;
+  padding: 13px 61px 12px 61px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: $violet-dark-color;
+  text-decoration: none;
+  background-color: $violet-lite-color;
+  border: 1px solid $violet-lite-color;
+  border-radius: 3px;
+
+  &:focus {
+    outline: none;
+    color: rgba($violet-dark-color, 1);
+    box-shadow: 0 0 0 0.2rem rgba(#7835bb, 0.25);
+  }
+}
+
+.button--mobile-menu {
+  width: 100%;
+}
+
+.button--registration {
+  width: 100%;
+}
+
+.button--organization-header {
+  display: none;
+}
+
+.button--enter {
+  width: 100%;
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
+.button--recovery-password {
+  padding-left: 20px;
+  padding-right: 23px;
+}
+
+.button--recovery-next-step {
+  padding-left: 19px;
+  padding-right: 19px;
+}
+
+.button--green {
+  color: $green-color;
+  background-color: $green-color-lite;
+  border-color: $green-color-lite;
+
+  &:focus {
+    color: $green-color;
+    box-shadow: 0 0 0 0.2rem rgba($green-color, 0.25);
+  }
+}
+
+.button--save {
+  position: relative;
+}
+
+.button--save svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.button--cabinet-submit {
+  position: relative;
+  padding-left: 49px;
+  padding-right: 20px;
+}
+
+.button--cabinet-submit svg {
+  position: absolute;
+  left: 20px;
+  top: 15px;
+}
+
+.button--add-something {
+  position: relative;
+  padding-right: 19px;
+  padding-left: 51px;
+
+  &::before,
+  &::after {
+    content: " ";
+    position: absolute;
+    left: 20px;
+    top: 21px;
+    height: 1px;
+    width: 21px;
+    background-color: $violet-dark-color;
+  }
+
+  &::after {
+    transform: rotate(-90deg);
+  }
+}
+
+.button--yellow {
+  color: $yellow-color;
+  background-color: $yellow-lite-color;
+  border-color: $yellow-lite-color;
+
+  &:focus {
+    color: rgba($yellow-color, 1);
+    box-shadow: 0 0 0 0.2rem rgba($yellow-color, 0.25);
+  }
+}
+
+.button-view {
+  position: relative;
+  padding-left: 55px;
+  padding-right: 21px;
+}
+
+.button-view svg {
+  position: absolute;
+  left: 20px;
+  top: 15px;
+}
+
+@media (min-width: $tablet) {
+  .button--save {
+    padding: 11px 20px 11px 50px;
+  }
+
+  .button--save svg {
+    left: 21px;
+    top: 12px;
+  }
+}
+
+@media (min-width: $tablet-large) {
+  .button--organization-header {
+    display: inline-block;
+    padding: 12px 19px;
+  }
+}
+
+@media (min-width: $laptop) {
+  .button {
+    &:hover {
+      color: rgba($violet-dark-color, 0.6);
+    }
+
+    &:focus {
+      outline: none;
+      color: rgba($violet-dark-color, 1);
+      box-shadow: 0 0 0 0.2rem rgba(#7835bb, 0.25);
+    }
+  }
+
+  .button--green {
+    &:hover {
+      color: rgba($green-color, 0.6);
+    }
+
+    &:focus {
+      color: rgba($green-color, 1);
+      box-shadow: 0 0 0 0.2rem rgba($green-color, 0.25);
+    }
+  }
+
+  .button--yellow {
+    &:hover {
+      color: rgba($yellow-color, 0.6);
+    }
+
+
+    &:focus {
+      color: rgba($yellow-color, 1);
+      box-shadow: 0 0 0 0.2rem rgba($yellow-color, 0.25);
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .button--organization-header {
+    letter-spacing: 0.3px;
+  }
+}

@@ -1,0 +1,24 @@
+.label {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  color: $black-color;
+  line-height: 21px;
+}
+
+.label--has-icon svg {
+  position: absolute;
+  right: -22px;
+  top: 3px;
+}
+
+.label--required {
+  position: relative;
+
+  &::after {
+    content: "*";
+    font-weight: 700;
+    color: $red-color;
+  }
+}

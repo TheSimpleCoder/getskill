@@ -1,0 +1,176 @@
+.form__control {
+  margin: 0 0 22px 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.form--registration {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.form__control--submit {
+  margin-top: 31px;
+}
+
+.form__control--description {
+  margin-top: 33px;
+  margin-bottom: 0;
+  font-weight: 300;
+}
+
+.form__description p {
+  margin: 0 0 16px 0;
+  font-size: 16px;
+
+  &:first-child {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.form__description p br {
+  display: none;
+}
+
+.form__content-list {
+  margin-top: 32px;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.form__content-list li {
+  position: relative;
+  padding-left: 41px;
+  margin-bottom: 22px;
+  font-size: 16px;
+  font-weight: 300;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 21px;
+    height: 21px;
+    background-image: url("../img/circle-list.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.form--recovery-password--next-step .form__control {
+  margin-bottom: 32px;
+}
+
+.form--cabinet-password .form__control {
+  margin: 0 0 32px 0;
+}
+
+@media (min-width: $iphone-breakpoint) {
+  .form__content-list li br {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet) {
+  .form--recovery-password {
+    max-width: 429px;
+    width: 100%;
+  }
+}
+
+@media (min-width: $tablet-large) {
+  .form--registration {
+    padding-bottom: 28px;
+  }
+
+  .form--recovery-password {
+    position: relative;
+    max-width: 935px;
+  }
+
+  .form--recovery-password .form__control {
+    max-width: 430px;
+    width: 100%;
+  }
+
+  .form--recovery-password .form__control--description {
+    position: absolute;
+    right: 0;
+    top: 32px;
+    margin: 0;
+    max-width: 360px;
+  }
+
+  .form--recovery-password--next-step .form__control--description {
+    top: -1px;
+    right: -2px;
+  }
+
+  .form--cabinet-email .form__control {
+    max-width: 370px;
+  }
+
+  .form--cabinet-email .form__control--description {
+    max-width: 439px;
+  }
+
+  .form--cabinet-email {
+    max-width: 868px;
+  }
+
+  .form--cabinet-password .form__control--description {
+    top: 1px;
+  }
+}
+
+@media (min-width: $laptop) {
+  .form--recovery-password {
+    max-width: 1015px;
+  }
+
+  .form--recovery-password .form__control--description {
+    max-width: 439px;
+  }
+
+  .form--cabinet-password .form__control {
+    max-width: 370px;
+  }
+
+  .form--cabinet-password .form__control--description {
+    max-width: 293px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .form__description p br {
+    display: block;
+  }
+
+  .form--recovery-password--next-step .form__control--description {
+    right: 1px;
+    top: 1px;
+  }
+
+  .form--cabinet-password .form__control,
+  .form--cabinet-email .form__control {
+    max-width: 430px;
+  }
+
+  .form--cabinet-password .form__control--description {
+    max-width: 293px;
+    right: 137px;
+  }
+}

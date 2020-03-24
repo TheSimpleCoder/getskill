@@ -1,0 +1,49 @@
+.enter {
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+.enter__by-social {
+  margin-top: 29px;
+}
+
+@media (min-width: $tablet) {
+  .enter {
+    margin-top: 59px;
+  }
+
+  .enter__wrapper {
+    display: flex;
+    max-width: 778px;
+    width: 100%;
+  }
+
+  .enter__form {
+    width: 100%;
+    max-width: 429px;
+  }
+
+  .enter__by-social {
+    position: relative;
+    margin-top: 0;
+    padding-left: 72px;
+    max-width: 277px;
+    margin-left: auto;
+    border-left: 1px solid $gray-color;
+
+    &::before {
+      content: "или";
+      position: absolute;
+      left: -12px;
+      top: 84px;
+      background-color: $white-color;
+      color: $black-color;
+    }
+  }
+}
+
+@media (min-width: $tablet-large) {
+  .enter {
+    margin-bottom: 146px;
+  }
+}

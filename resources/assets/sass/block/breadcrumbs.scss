@@ -1,0 +1,70 @@
+.breadcrumbs {
+  display: none;
+  border-bottom: 1px solid $gray-color;
+}
+
+@media (min-width: $tablet) {
+  .breadcrumbs {
+    padding-bottom: 22px;
+    display: block;
+  }
+
+  .breadcrumbs__list {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .breadcrumbs__item {
+    position: relative;
+    margin-right: 46px;
+    color: $black-color;
+
+    &::before {
+      content: " ";
+      position: absolute;
+      right: -25px;
+      top: 4px;
+      width: 5px;
+      height: 10px;
+      background-image: url("../img/breadcrumbsarrow.svg");
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .breadcrumbs__item a {
+    display: block;
+    font-size: 14px;
+    color: $gray-lite-color;
+    text-decoration: none;
+  }
+
+  .breadcrumbs__item a[href]:focus {
+    color: $black-color;
+  }
+}
+
+@media (min-width: $tablet-large) {
+  .breadcrumbs {
+    padding-top: 20px;
+    padding-bottom: 19px;
+  }
+}
+
+@media (min-width: $laptop) {
+  .breadcrumbs__item a[href]:hover {
+    color: $gray-hover-color;
+  }
+
+  .breadcrumbs__item a[href]:focus {
+    color: $black-color;
+  }
+}

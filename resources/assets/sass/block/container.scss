@@ -1,0 +1,38 @@
+.container {
+  max-width: 100%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (min-width: $horizontal-mobile) {
+  .container {
+    max-width: 575px;
+  }
+}
+
+@media (min-width: $tablet) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: $tablet-large) {
+  .container {
+    max-width: 992px;
+  }
+}
+
+@media (min-width: $laptop) {
+  .container {
+    max-width: 1210px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .container {
+    max-width: 1390px;
+  }
+}

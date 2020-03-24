@@ -1,0 +1,21 @@
+<?php
+return [
+    'Title' => 'Реєстрація для організацій',
+    'Menu item user' => 'Користувач',
+    'Menu item organization' => 'Організація',
+    'Join now to' => 'Приєднуйтесь <br> до',
+    'Background phrase one' => 'отримайте особисту сторінку організації',
+    'Background phrase two' => 'безкоштовно публікуйте всі курси',
+    'Background phrase three' => 'міні-CRM для обробки заявок',
+    'First Name' => 'Ім`я',
+    'Email' => 'Email',
+    'Password' => 'Пароль',
+    'Password confirm' => 'Повторити пароль',
+    'With' => 'З',
+    'Privacy policy' => 'політикою конфіденційності',
+    'Acquainted' => 'ознайомлений',
+    'Sign Up' => 'Зареєструватися',
+    'Check your email and click on the link to verify.' => 'Перевірте Вашу пошту і перейдіть по посиланню в листі.',
+    'Sorry your link cannot be identified.' => 'Вибачте, Ваш запит не підтверджено.',
+    'Your e-mail is verified. You can now login.' => 'Ваш email успішно верифіковано. Ви можете увійти на сайт.',
+];

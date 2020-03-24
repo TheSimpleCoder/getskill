@@ -1,0 +1,116 @@
+.edit-information__buttons {
+  display: none;
+}
+
+.edit-information__header {
+  margin-bottom: 15px;
+}
+
+.edit-information__tabs .tabs__list {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.edit-information__wrapper-name .edit-information__input-elements {
+  margin-bottom: 32px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.edit-information__wrapper-name {
+  margin-bottom: 31px;
+}
+
+.edit-information__name {
+  padding-bottom: 63px;
+  border-bottom: 1px solid $gray-color;
+}
+
+.edit-information__business-information {
+  padding-top: 32px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid $gray-color;
+}
+
+.edit-information__business-information .edit-information__input-elements {
+  margin-bottom: 33px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.edit-information__business-information .label {
+  margin-top: 0;
+}
+
+.edit-information__details {
+  padding-top: 29px;
+}
+
+.edit-information__add {
+  margin-bottom: 0;
+  margin-top: 30px;
+  text-align: right;
+}
+
+@media (min-width: $tablet) {
+  .edit-information__buttons {
+    display: flex;
+    max-width: 342px;
+  }
+}
+
+@media (min-width: $tablet-large) {
+  .edit-information__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+
+  .edit-information__buttons .button--yellow {
+    margin-right: 20px;
+  }
+
+  .edit-information__name {
+    display: flex;
+  }
+
+  .edit-information__wrapper-name {
+    flex-grow: 1;
+    margin-bottom: 0;
+  }
+
+  .edit-information__name .load-file {
+    margin-left: 30px;
+    width: 202px;
+  }
+
+  .edit-information__name .load-file__content {
+    width: 100%;
+  }
+
+  .edit-information__header h2 {
+    margin-top: 7px;
+  }
+
+  .edit-information__business-information {
+    padding-bottom: 58px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .edit-information__header h2 {
+    margin-top: 9px;
+  }
+
+  .edit-information__header {
+    margin-bottom: 45px;
+  }
+
+  .edit-information__name {
+    padding-bottom: 60px;
+  }
+}

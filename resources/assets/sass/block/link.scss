@@ -1,0 +1,33 @@
+.link {
+  color: $violet-dark-color;
+  text-decoration: none;
+  border-bottom: 1px dashed $violet-dark-color;
+
+  &:focus {
+    opacity: 0.3;
+  }
+}
+
+.link--enter {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 16px;
+}
+
+@media (min-width: $tablet-large) {
+  .link--enter {
+    margin-top: 14px;
+  }
+}
+
+@media (min-width: $laptop) {
+  .link {
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:focus {
+      opacity: 0.3;
+    }
+  }
+}

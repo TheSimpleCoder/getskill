@@ -1,0 +1,24 @@
+.h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 37px;
+  color: $black-color;
+}
+
+.h2--cabinet {
+  margin-bottom: 31px;
+}
+
+@media (min-width: $tablet-large) {
+  .h2--cabinet {
+    padding-top: 8px;
+    margin-bottom: 59px;
+  }
+}
+
+@media (min-width: $laptop) {
+  .h2--cabinet {
+    margin-bottom: 60px;
+  }
+}

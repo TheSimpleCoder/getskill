@@ -1,0 +1,138 @@
+.dynamic-form {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.dynamic-form__header {
+  display: flex;
+  align-items: flex-start;
+  padding: 12px 20px 6px 20px;
+  border: 1px solid $gray-color;
+  border-radius: 3px;
+}
+
+.dynamic-form__name {
+  flex-grow: 1;
+  margin: 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.dynamic-form__toggle {
+  position: relative;
+  margin-right: -8px;
+  width: 35px;
+  height: 21px;
+  background-color: transparent;
+  border: none;
+
+  &::before,
+  &::after {
+    content: " ";
+    position: absolute;
+    right: 7px;
+    top: 10px;
+    height: 1px;
+    width: 21px;
+    background-color: $black-color;
+  }
+
+  &::before {
+    transform: rotate(90deg);
+  }
+}
+
+.dynamic-form__dynamic {
+  margin-right: 14px;
+}
+
+.dynamic-form__switcher {
+  margin-right: 21px;
+}
+
+.dynamic-form__body {
+  padding: 20px;
+  border: 1px solid $gray-color;
+  border-top: none;
+}
+
+.dynamic-form__left-element .label {
+  margin-top: 0;
+}
+
+.dynamic-form__left-element {
+  margin-bottom: 32px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.dynamic-form__elements {
+  margin-bottom: 32px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.dynamic-form__item {
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.dynamic-form__content--hidden .dynamic-form__body {
+  display: none;
+}
+
+.dynamic-form__item--open .dynamic-form__toggle::before {
+  display: none;
+}
+
+.dynamic-form__elements--connect .dynamic-form__left-element {
+  margin-bottom: 20px;
+}
+
+@media (min-width: $tablet-large) {
+  .dynamic-form__elements {
+    display: flex;
+  }
+
+  .dynamic-form__left-element {
+    max-width: 277px;
+    margin-right: 60px;
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .dynamic-form__right-element {
+    max-width: 555px;
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .dynamic-form__elements--connect .dynamic-form__left-element {
+    margin-bottom: 0;
+  }
+
+  .dynamic-form__elements--connect .dynamic-form__right-element {
+    padding-top: 27px;
+  }
+
+  .dynamic-form__toggle {
+    margin-right: 0;
+  }
+
+  .dynamic-form__body {
+    padding: 30px 30px 32px 30px;
+  }
+
+  .dynamic-form__header {
+    padding-left: 28px;
+  }
+}

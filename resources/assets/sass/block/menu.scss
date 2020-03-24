@@ -1,0 +1,41 @@
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.menu__list {
+  width: 25%;
+}
+
+.menu__link {
+  display: block;
+  font-weight: 400;
+  padding: 13px;
+  text-align: center;
+  font-size: 16px;
+  color: $white-color;
+  text-decoration: none;
+
+  &:focus {
+    background-color: #5d209a;
+  }
+}
+
+.menu__list--active .menu__link {
+  background-color: #5d209a;
+}
+
+@media (min-width: $laptop) {
+  .menu__link[href]:hover {
+    color: rgba($white-color, 0.6);
+    background-color: $violet-dark-color;
+  }
+
+  .menu__link[href]:focus {
+    color: rgba($white-color, 0.3);
+    background-color: $violet-dark-color;
+  }
+}

@@ -1,0 +1,6 @@
+@mixin headline-h2($color) {
+  color: $color;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: normal;
+}
