@@ -141,31 +141,188 @@ $keywords = '';
 														</div>
 													</div>
 												</div>
+
+
 												<div class="edit-information__input-elements edit-information__input-elements--large">
 													<p class="label label--required">
-														{{ __('cabinet/organization/course.Category') }}
+                                                        {{ __('cabinet/organization/course.Category') }}
 													</p>
-													<br>
-													<select required name="category" class="selCatCourse">
-														<option disabled selected value="">Выберите категорию</option>
-														@foreach($cat as $c)
-														<option value="{{ $c['c_id'] }}">{{ $c['name'] }}</option>
-														@endforeach
-													</select>
-													
-													<style>
-													span.select2-selection.select2-selection--single{
-														height: 45px;
-													}
-													span.select2-selection__rendered{
-														height: 35px;
-														margin-top: 8px;
-													}
-													span.select2-selection__arrow{
-														margin-top: 8px;
-													}
-													</style>
+													<div class="select-standard category-select select-standard--without-search course_select_1">
+														<button type="button" class="select-standard__toggle toggle-btn-course close" aria-label="Открыть список">
+															<span class="select-standard__title select-type-course">
+																Офлайн
+															</span>
+															<span class="select-standard__arrow">
+																<svg width="13" height="7">
+																	<use xlink:href="#icon-arrow"></use>
+																</svg>
+															</span>
+														</button>
+														<input type="hidden" name="type_online" class="course_type" value="2">
+														<div class="select-standard__body course-cat-list">
+															<ul class="select-standard__list category-select__list">
+																<li class="select-standard__item">
+                                                                    <button class="select-category__toggle" type="button">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="7" height="13" viewBox="0 0 7 13"><g transform="translate(0 13) rotate(-90)"><path d="M6.533,33.535a.457.457,0,0,1,.65,0l5.711,5.76,5.722-5.76a.457.457,0,0,1,.65,0,.465.465,0,0,1,0,.654L13.23,40.265a.447.447,0,0,1-.325.135.466.466,0,0,1-.325-.135L6.544,34.189A.455.455,0,0,1,6.533,33.535Z" transform="translate(-6.4 -33.4)" fill="#0a0a0a"/></g></svg>
+                                                                        <span>Категория 1</span>
+                                                                    </button>
+                                                                    <ul>
+                                                                        <li>
+                                                                            <button class="select-category__toggle" type="button">
+                                                                                <svg xmlns="http://www.w3.org/2000/svg" width="7" height="13" viewBox="0 0 7 13"><g transform="translate(0 13) rotate(-90)"><path d="M6.533,33.535a.457.457,0,0,1,.65,0l5.711,5.76,5.722-5.76a.457.457,0,0,1,.65,0,.465.465,0,0,1,0,.654L13.23,40.265a.447.447,0,0,1-.325.135.466.466,0,0,1-.325-.135L6.544,34.189A.455.455,0,0,1,6.533,33.535Z" transform="translate(-6.4 -33.4)" fill="#0a0a0a"/></g></svg>
+                                                                                <span>Категория 2</span>
+                                                                            </button>
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <div class="radio">
+                                                                                        <input type="radio" name="tester" id="test1" class="radio__input visually-hidden">
+                                                                                        <label for="test1" class="radio__label">
+                                                                                            бесплатно
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <div class="radio">
+                                                                                        <input type="radio" name="tester" id="test2" class="radio__input visually-hidden">
+                                                                                        <label for="test2" class="radio__label">
+                                                                                            бесплатно
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <div class="radio">
+                                                                                        <input type="radio" name="tester" id="test3" class="radio__input visually-hidden">
+                                                                                        <label for="test3" class="radio__label">
+                                                                                            бесплатно
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li  class="select-standard__item">
+                                                                    <button class="select-category__toggle" type="button">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="7" height="13" viewBox="0 0 7 13"><g transform="translate(0 13) rotate(-90)"><path d="M6.533,33.535a.457.457,0,0,1,.65,0l5.711,5.76,5.722-5.76a.457.457,0,0,1,.65,0,.465.465,0,0,1,0,.654L13.23,40.265a.447.447,0,0,1-.325.135.466.466,0,0,1-.325-.135L6.544,34.189A.455.455,0,0,1,6.533,33.535Z" transform="translate(-6.4 -33.4)" fill="#0a0a0a"/></g></svg>
+                                                                        <span>Категория 1</span>
+                                                                    </button>
+                                                                    <ul>
+                                                                        <li>
+                                                                            <button class="select-category__toggle" type="button">
+                                                                                <svg xmlns="http://www.w3.org/2000/svg" width="7" height="13" viewBox="0 0 7 13"><g transform="translate(0 13) rotate(-90)"><path d="M6.533,33.535a.457.457,0,0,1,.65,0l5.711,5.76,5.722-5.76a.457.457,0,0,1,.65,0,.465.465,0,0,1,0,.654L13.23,40.265a.447.447,0,0,1-.325.135.466.466,0,0,1-.325-.135L6.544,34.189A.455.455,0,0,1,6.533,33.535Z" transform="translate(-6.4 -33.4)" fill="#0a0a0a"/></g></svg>
+                                                                                <span>Категория 2</span>
+                                                                            </button>
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <div class="radio">
+                                                                                        <input type="radio" name="tester" id="test1" class="radio__input visually-hidden">
+                                                                                        <label for="test1" class="radio__label">
+                                                                                            бесплатно
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <div class="radio">
+                                                                                        <input type="radio" name="tester" id="test2" class="radio__input visually-hidden">
+                                                                                        <label for="test2" class="radio__label">
+                                                                                            бесплатно
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <div class="radio">
+                                                                                        <input type="radio" name="tester" id="test3" class="radio__input visually-hidden">
+                                                                                        <label for="test3" class="radio__label">
+                                                                                            бесплатно
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li  class="select-standard__item">
+                                                                    <button class="select-category__toggle" type="button">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="7" height="13" viewBox="0 0 7 13"><g transform="translate(0 13) rotate(-90)"><path d="M6.533,33.535a.457.457,0,0,1,.65,0l5.711,5.76,5.722-5.76a.457.457,0,0,1,.65,0,.465.465,0,0,1,0,.654L13.23,40.265a.447.447,0,0,1-.325.135.466.466,0,0,1-.325-.135L6.544,34.189A.455.455,0,0,1,6.533,33.535Z" transform="translate(-6.4 -33.4)" fill="#0a0a0a"/></g></svg>
+                                                                        <span>Категория 1</span>
+                                                                    </button>
+                                                                    <ul>
+                                                                        <li>
+                                                                            <button class="select-category__toggle" type="button">
+                                                                                <svg xmlns="http://www.w3.org/2000/svg" width="7" height="13" viewBox="0 0 7 13"><g transform="translate(0 13) rotate(-90)"><path d="M6.533,33.535a.457.457,0,0,1,.65,0l5.711,5.76,5.722-5.76a.457.457,0,0,1,.65,0,.465.465,0,0,1,0,.654L13.23,40.265a.447.447,0,0,1-.325.135.466.466,0,0,1-.325-.135L6.544,34.189A.455.455,0,0,1,6.533,33.535Z" transform="translate(-6.4 -33.4)" fill="#0a0a0a"/></g></svg>
+                                                                                <span>Категория 2</span>
+                                                                            </button>
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <div class="radio">
+                                                                                        <input type="radio" name="tester" id="test1" class="radio__input visually-hidden">
+                                                                                        <label for="test1" class="radio__label">
+                                                                                            бесплатно
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <div class="radio">
+                                                                                        <input type="radio" name="tester" id="test2" class="radio__input visually-hidden">
+                                                                                        <label for="test2" class="radio__label">
+                                                                                            бесплатно
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <div class="radio">
+                                                                                        <input type="radio" name="tester" id="test3" class="radio__input visually-hidden">
+                                                                                        <label for="test3" class="radio__label">
+                                                                                            бесплатно
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+															</ul>
+														</div>
+													</div>
 												</div>
+
+
+{{--												<div class="edit-information__input-elements edit-information__input-elements--large">--}}
+{{--													<p class="label label--required">--}}
+{{--														{{ __('cabinet/organization/course.Category') }}--}}
+{{--													</p>--}}
+{{--													<br>--}}
+{{--													<select required name="category" class="selCatCourse">--}}
+{{--														<option disabled selected value="">Выберите категорию</option>--}}
+{{--														@foreach($cat as $c)--}}
+{{--														<option value="{{ $c['c_id'] }}">{{ $c['name'] }}</option>--}}
+{{--														@endforeach--}}
+{{--													</select>--}}
+{{--                                                    --}}
+{{--                                                    <div class="category-select">--}}
+{{--                                                        <div class="category-select__current">--}}
+{{--                                                            <span>Выберите категорию</span>--}}
+{{--                                                            <span class="select-standard__arrow">--}}
+{{--																<svg width="13" height="7">--}}
+{{--																	<use xlink:href="#icon-arrow"></use>--}}
+{{--																</svg>--}}
+{{--															</span>--}}
+{{--                                                        </div>--}}
+{{--                                                    </div>--}}
+{{--													--}}
+{{--													<style>--}}
+{{--													span.select2-selection.select2-selection--single{--}}
+{{--														height: 45px;--}}
+{{--													}--}}
+{{--													span.select2-selection__rendered{--}}
+{{--														height: 35px;--}}
+{{--														margin-top: 8px;--}}
+{{--													}--}}
+{{--													span.select2-selection__arrow{--}}
+{{--														margin-top: 8px;--}}
+{{--													}--}}
+{{--													</style>--}}
+{{--												</div>--}}
 											</div>
 											<div class="edit-information__item">
 												<!-- <p class="edit-information__section-name">
@@ -326,7 +483,7 @@ $keywords = '';
 																</svg>
 															</span>
 														</div>
-														
+
 
 									                    @if (count($errors) > 0)
 														  	<div class="alert alert-danger">
@@ -518,7 +675,7 @@ $keywords = '';
                               								Выбрать фото
                             							</p>
                           							</div> -->
-                          							
+
                           							<label for="gallery_photos_t" class="button load-file__button btn-add-image">
                             							<svg width="27" height="22">
                               								<use xlink:href="#icon-folder"></use>

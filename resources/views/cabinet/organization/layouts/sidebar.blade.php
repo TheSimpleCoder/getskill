@@ -29,7 +29,7 @@
                 <svg width="21" height="21">
                     <use xlink:href="#icon-cab-org-dartz"></use>
                 </svg>
-                
+
                 {{ (App::isLocale('ru'))? 'Сделки' : 'Угоди' }}
                 @if(Deals::getNewDealsCount() > 0)
                     <span class="menu-cabinet__indicator">
@@ -44,7 +44,7 @@
                         <use xlink:href="#icon-cab-org-dartz"></use>
                     </svg>
                 </span>
-                
+
                 {{ (App::isLocale('ru'))? 'Сделки' : 'Угоди' }}
                 <span>
                     <svg width="37" height="12">
@@ -75,7 +75,7 @@
                     <use xlink:href="#icon-cabinet-clients"></use>
                 </svg>
                 {{ (App::isLocale('ru'))? 'Клиенты' : 'Клієнти' }}
-                
+
             </a>
         @endif
     </div>
@@ -84,7 +84,7 @@
             <svg width="21" height="20">
                 <use xlink:href="#icon-cabinet-star"></use>
             </svg>
-            
+
             {{ (App::isLocale('ru'))? 'Отзывы' : 'Відгуки' }}
             <!-- <span class="menu-cabinet__indicator">
                 2
@@ -97,7 +97,7 @@
                 <use xlink:href="#icon-cabinet-book"></use>
             </svg>
             {{ (App::isLocale('ru'))? 'Список курсов' : 'Список курсів' }}
-            
+
         </a>
     </div>
     <div class="menu-cabinet__item {{ Request::is(app()->getLocale() . '/cabinet-organization/master*') ? 'active' : '' }}">
@@ -108,7 +108,7 @@
                         <use xlink:href="#icon-cabinet-master"></use>
                     </svg>
                 </span>
-                
+
                 {{ (App::isLocale('ru'))? 'Мастер-классы' : 'Майстер-класи' }}
 
                 <span>
@@ -122,7 +122,7 @@
                 <svg width="20" height="21">
                     <use xlink:href="#icon-cabinet-master"></use>
                 </svg>
-                
+
                 {{ (App::isLocale('ru'))? 'Мастер-классы' : 'Майстер-класи' }}
             </a>
         @endif
@@ -135,7 +135,7 @@
                         <use xlink:href="#icon-cabinet-teacher"></use>
                     </svg>
                 </span>
-                
+
                 {{ (App::isLocale('ru'))? 'Преподаватели' : 'Викладачі' }}
 
                 <span>
@@ -149,7 +149,7 @@
                 <svg width="21" height="18">
                     <use xlink:href="#icon-cabinet-teacher"></use>
                 </svg>
-                
+
                 {{ (App::isLocale('ru'))? 'Преподаватели' : 'Викладачі' }}
             </a>
         @endif
@@ -160,7 +160,7 @@
                 <use xlink:href="#icon-cabinet-organization"></use>
             </svg>
             {{ (App::isLocale('ru'))? 'Организация' : 'Організація' }}
-            
+
         </a>
     </div>
     <div class="menu-cabinet__item menu-cabinet__item--separator menu-cabinet__item--active {{ Request::is(app()->getLocale() . '/cabinet-organization/profile/setting*') ? 'active' : '' }}">
@@ -169,7 +169,7 @@
                 <use xlink:href="#icon-cabinet-setting"></use>
             </svg>
             {{ (App::isLocale('ru'))? 'Настройки' : 'Налаштування' }}
-            
+
         </a>
     </div>
     <div class="menu-cabinet__item menu-cabinet__item--active {{ Request::is(app()->getLocale() . '/cabinet-organization/favorite*') ? 'active' : '' }}">
@@ -189,7 +189,7 @@
                 <use xlink:href="#icon-cabinet-card"></use>
             </svg>
             {{ (App::isLocale('ru'))? 'Счета и оплата' : 'Рахунки і оплата' }}
-            
+
         </a>
     </div>
     <div class="menu-cabinet__item">

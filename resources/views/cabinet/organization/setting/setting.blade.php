@@ -19,14 +19,16 @@ $keywords = '';
 		<div class="container cabinet__inner">
 			@include('cabinet.organization.layouts.sidebar', ['some' => 'data'])
 			<div class="cabinet__info-block">
-		        @if($user->getImageUrl())
-		            <img src="/storage/{{ Auth::user()->image }}" alt="" width="150">
-		            <form method="POST" action="{{ route('cabinet.organization.profile.delete-image', app()->getLocale()) }}">
-		                @csrf
-		                @method('DELETE')
-		                <button type="submit">Delete photo</button>
-		            </form>
-		        @endif
+                <div class="cabinet__info-ava">
+                    @if($user->getImageUrl())
+                        <img src="/storage/{{ Auth::user()->image }}" alt="" width="150">
+                        <form method="POST" action="{{ route('cabinet.organization.profile.delete-image', app()->getLocale()) }}">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="avatar__delete"></button>
+                        </form>
+                    @endif
+                </div>
 
 		        <form method="POST" action="{{ route('cabinet.organization.profile.update', app()->getLocale()) }}" enctype="multipart/form-data">
 		            @csrf

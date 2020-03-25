@@ -270,7 +270,7 @@ $keywords = '';
                                     </p>
                                     <div class="deals-edit__item-input-wrap">
                                         <p class="deals-edit__item--date">
-                                            {{ $p_name }}  
+                                            {{ $p_name }}
                                         </p>
                                         <div class="deals-edit__item__input-content">
                                             <label for="deals_edit_list_sum" class="visually-hidden">

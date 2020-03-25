@@ -43,17 +43,24 @@ $keywords = '';
                             			</svg>
                             			Удалить
                           			</button>
-	                        		<button type="submit" class="button button--cabinet-submit button--save button--green">
+	                        		<button type="submit" class="button hide-mobile button--cabinet-submit button--save button--green">
 	                            		<svg width="20" height="21">
 	                              			<use xlink:href="#icon-save"></use>
 	                            		</svg>
 	                            		Сохранить
 	                          		</button>
 	                    		</div>
+{{--                                remove class visible - button will hide --}}
+                                <button type="submit" class="button button--cabinet-submit button--save button--green button--fixed show-mobile visible">
+                                    <svg width="20" height="21">
+                                        <use xlink:href="#icon-save"></use>
+                                    </svg>
+                                    Сохранить
+                                </button>
 	                		</div>
-	                
+
 	              		</div>
-	            
+
 	            		<div class="edit-information__name">
 	                		<div class="edit-information__wrapper-name">
 	                  			<div class="edit-information__input-elements">
@@ -116,7 +123,7 @@ $keywords = '';
 	              	</form>
           		</div>
         	</div>
-			
+
 		</div>
 	</section>
 

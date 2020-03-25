@@ -55,7 +55,7 @@ $keywords = '';
                 </div>
                 <div class="registration__form">
                     <div class="container">
-                        <form method="POST" action="{{ route('register', app()->getLocale()) }}" id="registration_user">
+                        <form class="js-form-validation" method="POST" action="{{ route('register', app()->getLocale()) }}" id="registration_user">
                             @csrf
                             <input type="hidden" name="type" value="person">
                             <div class="form form--registration">
@@ -127,24 +127,24 @@ $keywords = '';
                                 <p class="form__control checkbox">
                                     <input type="checkbox" name="policy"
                                            id="registration_privacy_policy"
-                                           class="visually-hidden checkbox__input"
+                                           class="visually-hidden checkbox__input" checked
                                     >
                                     <label for="registration_privacy_policy" class="checkbox__label">
                                         {{ __('auth/register-person.With') }}
-                                        <a href="#" class="link">
+                                        <a target="_blank" href="https://getskill.com.ua/ru/term" class="link">
                                             {{ __('auth/register-person.Privacy policy') }}
                                         </a>
                                         {{ __('auth/register-person.Acquainted') }}
                                     </label>
                                 </p>
                                 <p class="form__control form__control--submit">
-                                    <button type="submit" class="button button--registration">
+                                    <button type="submit" class="button disabled button--registration">
                                         {{ __('auth/register-person.Sign Up') }}
                                     </button>
                                 </p>
-								
+
 								<input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
-								
+
                             </div>
                         </form>
                     </div>

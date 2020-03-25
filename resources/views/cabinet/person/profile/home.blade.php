@@ -18,16 +18,17 @@ $keywords = '';
 
 
 @section('cabinet')
-
     <div class="cabinet__info-block">
+        <div class="cabinet__info-ava">
         @if($user->getImageUrl())
             <img src="/storage/{{ Auth::user()->image }}" alt="" width="150">
             <form method="POST" action="{{ route('cabinet.person.profile.delete-image', app()->getLocale()) }}">
                 @csrf
                 @method('DELETE')
-                <button type="submit">Delete photo</button>
+                <button type="submit" class="avatar__delete"></button>
             </form>
         @endif
+        </div>
 
         <form method="POST" action="{{ route('cabinet.person.profile.update', app()->getLocale()) }}" enctype="multipart/form-data">
             @csrf

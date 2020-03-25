@@ -20,7 +20,7 @@ $keywords = '';
 		<div class="container cabinet__inner">
 			@include('cabinet.organization.layouts.sidebar', ['some' => 'data'])
 
-			
+
 			<div class="cabinet__info-block">
           		<div class="deals">
             		<div class="deals__top">
@@ -119,7 +119,7 @@ $keywords = '';
 	                        					</a>
 	                      					</div>
 	                      					<div class="action-circle__item">
-												
+
 	                      						<form method="POST" action="{{ route('cabinet.organization.deleteDeals', App::getLocale()) }}">
 	                      							{{ csrf_field() }}
 	                      							<input type="hidden" name="id" value="{{ $list->id }}">
@@ -143,7 +143,7 @@ $keywords = '';
 	                			</div>
 	              			</li>
               			@endforeach
-              
+
             		</ul>
             		<div class="deals__pagination">
               			<!-- Сюда втулить пагинацию -->

@@ -11,7 +11,7 @@ function ShowCatAttr() {
 		$('.custom-select__body').hide();
 		$(".tg-btn").removeClass("sh");
 	}
-	
+
 }
 
 $('.button-add-cat').click(function(){
@@ -66,9 +66,11 @@ $(document).on('click', '.dynamic-form__toggle', function(){
 	if($(this).parent().parent().hasClass('dynamic-form__content--hidden')){
 		$(this).parent().parent().removeClass('dynamic-form__content--hidden');
 		$(this).parent().parent().addClass('dynamic-form__item--open');
+		$(this).removeClass('plus');
 	}else{
 		$(this).parent().parent().removeClass('dynamic-form__item--open');
 		$(this).parent().parent().addClass('dynamic-form__content--hidden');
+        $(this).addClass('plus');
 	}
 });
 
@@ -86,7 +88,7 @@ function deleteFiliaOrganization(id){
         type: 'GET',
         url: "/delete/filia?id=" + id,
         success: function(result){
-            
+
         }
     });
 }
@@ -188,7 +190,7 @@ $(document).on('click', '.add-method-c', function(){
 					</span>
 					</button>
 					<div class="select-standard__body list-messenger list-messenger-`+ count +`">
-					
+
 					</div>
 			</div>
 			</div>
@@ -215,7 +217,7 @@ $("div.dynamic-form__left-element").on("click", function(){
 	setTimeout(function(){
 		$('.class-fillia-' + id).find('.messanger_list_data').val(
 			$.map($('.class-fillia-' + id).find('.change-in-messanger-data'),function(el){
-				
+
 				return el.getAttribute('data-name') + ': ' + el.getAttribute('data-data')
 			})
 		);
@@ -223,8 +225,8 @@ $("div.dynamic-form__left-element").on("click", function(){
 });
 
 $('body').click(function(){
-	
-	
+
+
 	var selElems = $('button.select-standard__toggle');
 	selElems.each(function() {
 		if(!$(this).hasClass('close'))
@@ -232,34 +234,38 @@ $('body').click(function(){
 			$(this).addClass('close');
 		}
 	});
-	
+
 	if(!$('button.select-standard__toggle').hasClass('close'))
 	{
 		$('button.select-standard__toggle').addClass('close');
 	}
-	
+
 	if(!$('button.sorting__toggle').hasClass('close'))
 	{
 		$('button.sorting__toggle').addClass('close');
 	}
-	
+
 	$(document).mouseup(function (e){ // событие клика по веб-документу
 		var div = $("div.select-standard"); // тут указываем ID элемента
-		
-		$('div.select-standard__body').css('display', 'none');
+
+        if (!e.target.closest('.select-category__toggle')) {
+            $('div.select-standard__body').css('display', 'none');
+        }
+
+
 		$('div.select_list').css('display', 'none');
 		$('ul.select_list').css('display', 'none');
 		if (!div.is(e.target) && div.has(e.target).length === 0) {
-			
+
 		} else {
 			$(e.target).parent().parent().find('.select-standard__body').css('display', 'block');
 		}
-		
-		
-		
+
+
+
 		//$(e.target.parent()).find('select-standard__body').css('display', 'block');
 	});
-	
+
 	//var elems = $('div.select-standard__body').css('display', 'none');
 	//var elems = $('div.select_list').css('display', 'none');
 });
@@ -276,7 +282,7 @@ $(document).on('input', '.change-in-messanger-data', function(){
 $(document).on('click', '.delete-messanger-data', function(){
 	var id = $(this).parents('.fillia-li').data('filia');
 	$(this).parents('.container-c').remove();
-	
+
 	console.log($(this).parents('.fillia-li').find('.messanger_list_data').val());
 	$('.class-fillia-' + id).find('.messanger_list_data').val(
         $.map($('.class-fillia-' + id).find('.change-in-messanger-data'),function(el){
@@ -289,20 +295,20 @@ $(document).on('click', '.delete-messanger-data', function(){
 function addNewFiliya(){
 	var num = $('.fillia-li').length + 1;
 	$('#count_fillia').val(parseInt($('#count_fillia').val()) + 1);
-	
+
 	var citySelector = $('div#cSelCopy').html();
 	citySelector = citySelector.replace('regions_1', 'regions_' + num);
 		citySelector = citySelector.replace('selCityElem_1', 'selCityElem_' + num);
 	citySelector = citySelector.replace('selCityElem_1_copy', 'selCityElem_' + num);
 
-	
+
 	$('#ol_list_fill').append(`
 
 		<li class="dynamic-form__item dynamic-form__item--open fillia-li class-fillia-`+ num +`">
 			<div class="dynamic-form__content">
 					<div class="dynamic-form__header">
 					<p class="dynamic-form__name">
-							
+
 					</p>
 					<div class="dynamic-form__switcher">
 							<div class="switcher">
@@ -349,7 +355,7 @@ function addNewFiliya(){
 							<input type="text" name="dynamic-form-phone" class="input input--full-width phone-add-list" id="dynamic_form_phone_`+ num +`" data-phone-number="">
 							<div class="cloned-input dynamic-form__cloned">
 									<ul class="cloned-input__list ul-clone-list-`+ num +`">
-									
+
 									</ul>
 									<button type="button" class="cloned-input__add clone-add-phone-number" data-clone="`+ num +`">
 									`+ $('.add_number_lang').text() +`
@@ -381,7 +387,7 @@ function addNewFiliya(){
 									</span>
 									</button>
 									<div class="select-standard__body list-messenger list-messenger-`+ num +`">
-									
+
 									</div>
 							</div>
 							</div>
@@ -407,7 +413,7 @@ function addNewFiliya(){
 
 	$('.reg-set-class').html($('#region_list').html());
 	$('.list-messenger').html($('#list_messenger').html());
-	
+
 
 	$('select.selCityElem_' + num).select2({
 		matcher: matchCustom,
@@ -482,7 +488,7 @@ function deletePhotoForAlbum(id){
         type: 'GET',
         url: "/" + lang + "/cabinet-organization/drop-file?id=" + id,
         success: function(result){
-            
+
         }
     });
 
@@ -499,11 +505,15 @@ function deletePhotoForAlbum(id){
 $(document).on('click', '.toggle-btn-course', function(){
 	if($(this).hasClass('close')){
 		$(this).removeClass('close');
-		$('.course-cat-list').show();
+		$(this).closest('.select-standard').find('.course-cat-list').show();
 	}else{
 		$(this).addClass('close');
-		$('.course-cat-list').hide();
+        $(this).closest('.select-standard').find('.course-cat-list').hide();
 	}
+});
+
+$('.category-select__list').on('click', '.select-category__toggle', function() {
+    $(this).parent().toggleClass('active');
 });
 
 $(document).on('click', '.get-type-course', function(){
@@ -533,7 +543,7 @@ $(document).on('click', '.select_btn', function(){
 });
 
 $(document).on('click', '.select_option', function(){
-	
+
 	var name = $(this).text(),
 		id = $(this).data('id');
 	var input = $(this).data('in');
@@ -640,7 +650,7 @@ function courseSetNewStatus(status, id){
         type: 'GET',
         url: "/" + lang + "/cabinet-organization/course/set-status?status=" + status + "&id=" + id,
         success: function(result){
-            
+
         }
     });
 }
@@ -797,6 +807,40 @@ $(document).on('change', '#date_2', function(){
 	}
 })
 
+$('.reviews__footer-form').on('click', '.button.button--cancel', function(){
+	$(this).closest('.reviews__footer.reviews__footer--answered').removeClass('reviews__footer--answered');
+})
+
+$('.js-form-validation').each(function() {
+    var form = $(this);
+    var inputs = $(form).find(':input');
+    var values = [];
+    var isFilled = false;
+
+    function checkInputs(form) {
+        var isFilled = true;
+        $(form).find('input:not([type="hidden"])').each(function() {
+            if (!$(this).val()) {
+                isFilled = false;
+            }
+        });
+
+        return isFilled;
+    }
+
+    $(form).on('input', ':input', function(e) {
+        var isFilled = checkInputs(form);
+
+        if (isFilled) {
+            $(form).find('.form__control--submit .button.disabled').removeClass('disabled');
+        } else {
+            $(form).find('.form__control--submit .button').addClass('disabled');
+        }
+    });
+
+    checkInputs(form);
+})
+
 
 /*****************************************/
 /**************** Serach *****************/
@@ -850,6 +894,12 @@ $(document).on('input', '#search', function(){
 				`);
 
 			});
+
+			if ($('.result-search .result-search__item').length === 0) {
+                $('.result-search').addClass('hide-results');
+            } else {
+                $('.result-search').removeClass('hide-results');
+            }
         }
     });
 })
@@ -928,7 +978,7 @@ function setCookie(name, value, options) {
     	d.setTime(d.getTime() + expires*1000);
     	expires = options.expires = d;
   	}
-  	if (expires && expires.toUTCString) { 
+  	if (expires && expires.toUTCString) {
   		options.expires = expires.toUTCString();
   	}
 
@@ -938,8 +988,8 @@ function setCookie(name, value, options) {
 
   	for(var propName in options) {
     	updatedCookie += "; " + propName;
-    	var propValue = options[propName];    
-    	if (propValue !== true) { 
+    	var propValue = options[propName];
+    	if (propValue !== true) {
       		updatedCookie += "=" + propValue;
      	}
   	}
@@ -979,7 +1029,7 @@ $(document).on('click', '.add_favorite', function () {
     setCookie('Like-'+type+'-'+id, id);
     $('.favorite_'+id).addClass('like--active');
     $('.favorite_'+id).removeClass('add_favorite');
-    
+
     $('.like--header').addClass('like--active');
     $('.like__count').html(getCountCookie());
 
@@ -1002,7 +1052,7 @@ $(document).on('click', '.like--active', function () {
     deleteCookie('Like-'+type+'-'+id);
     $('.favorite_'+id).removeClass('like--active');
     $('.favorite_'+id).addClass('add_favorite');
-    
+
     var count = getCountCookie();
     $('.like__count').html(count);
     if(count <= 0){
@@ -1092,9 +1142,62 @@ $('.status_option').click(function(){
 	var status = $(this).text(),
 		id = $(this).data('id');
 
+	var select = $(this).closest('.underline-select');
+
+	switch (id) {
+        case 0: {
+            $(select).removeClass('underline-select--processing underline-select--cancel underline-select--completed').addClass('underline-select--new');
+            break;
+        }
+        case 1: {
+            $(select).removeClass('underline-select--new underline-select--cancel underline-select--completed').addClass('underline-select--processing');
+            break;
+        }
+        case 2: {
+            $(select).removeClass('underline-select--new underline-select--cancel underline-select--processing').addClass('underline-select--completed');
+            break;
+        }
+        case 3: {
+            $(select).removeClass('underline-select--completed underline-select--processing underline-select--new').addClass('underline-select--cancel');
+            break;
+        }
+
+        default:
+            break;
+    }
+
 	$('.input_status').val(id);
 	$('.status_val').html(status);
 });
+
+$("<style type='text/css'> .filter__content:before{ content:'';display:table;clear:both;}</style>").appendTo("head");
+
+if ($('.underline-select').length) {
+    var id = parseInt($('.input_status').val(), 10);
+    var select = $('.underline-select');
+
+    switch (id) {
+        case 0: {
+            $(select).removeClass('underline-select--processing underline-select--cancel underline-select--completed').addClass('underline-select--new');
+            break;
+        }
+        case 1: {
+            $(select).removeClass('underline-select--new underline-select--cancel underline-select--completed').addClass('underline-select--processing');
+            break;
+        }
+        case 2: {
+            $(select).removeClass('underline-select--new underline-select--cancel underline-select--processing').addClass('underline-select--completed');
+            break;
+        }
+        case 3: {
+            $(select).removeClass('underline-select--completed underline-select--processing underline-select--new').addClass('underline-select--cancel');
+            break;
+        }
+
+        default:
+            break;
+    }
+}
 
 $('.deals-edit__button-edit').click(function(){
 	$(this).parents('.deals-edit__item').addClass('deals-edit__item--open');
@@ -1390,7 +1493,7 @@ function sendAnaliticPhone(id, type, course){
         type: 'GET',
         url: "/atalitic/add/open-phone?user=" + id + "&type=" + type + "&course=" + course,
         success: function(result){
-            
+
         }
     });
 }
@@ -1400,7 +1503,7 @@ function sendAnaliticFavorite(id, type, action){
         type: 'GET',
         url: "/atalitic/add/favorite?id=" + id + "&type=" + type + "&action=" + action,
         success: function(result){
-            
+
         }
     });
 }
@@ -1541,7 +1644,7 @@ function transliterate(text, engToRus) {
 	;
 	for(x = 0; x < rus.length; x++) {
 		text = text.split(engToRus ? eng[x] : rus[x]).join(engToRus ? rus[x] : eng[x]);
-		text = text.split(engToRus ? eng[x].toUpperCase() : rus[x].toUpperCase()).join(engToRus ? rus[x].toUpperCase() : eng[x].toUpperCase());	
+		text = text.split(engToRus ? eng[x].toUpperCase() : rus[x].toUpperCase()).join(engToRus ? rus[x].toUpperCase() : eng[x].toUpperCase());
 	}
 	return text.toLowerCase();
 }
@@ -1601,7 +1704,7 @@ function sendNewOrder(){
         type: 'GET',
         url: "/sort/file?sort_gallery=" + $('input[name="sort_gallery"]').val(),
         success: function(result){
-            
+
         }
     });
 }

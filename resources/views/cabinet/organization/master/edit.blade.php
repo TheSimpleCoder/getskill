@@ -107,7 +107,7 @@ $keywords = '';
 													<p class="label label--required">
 														{{ __('cabinet/organization/course.Category') }}
 													</p>
-													
+
 													<select required style="width:100%;" id="selSCatList" name="category">
 														@foreach($cat as $c)
 															@if($cat_current->id == $c['id'])
@@ -116,7 +116,7 @@ $keywords = '';
 															<option value="{{ $c['id'] }}">{{ $c['name'] }}</option>
 														@endforeach
 													</select>
-													
+
 												</div>
 											</div>
 											<div class="edit-information__item">
@@ -179,7 +179,7 @@ $keywords = '';
 															{{ (App::isLocale('ru'))? 'Дата проведения' : 'Дата проведення' }}
 														</p>
 														<div class="select-standard select-standard--without-search course_select_1">
-															<input required type="date" name="date" class="course_type" class="input input--full-width" value="{{ date('Y-m-d', $master->date) }}">
+															<input required type="date" name="date" class="course_type date-input input input--full-width" value="{{ date('Y-m-d', $master->date) }}">
 														</div>
 													</div>
 												</div>
@@ -217,7 +217,7 @@ $keywords = '';
 													</p>
 													<div class="custom-select select_class">
 														<div class="custom-select__header result_btn_t" tabindex="0">
-															
+
 															<span class="custom-select__toggle-icon select_btn close" aria-label="Открыть категорию">
 																<svg width="13" height="7">
 																	<use xlink:href="#icon-arrow"></use>
@@ -227,7 +227,7 @@ $keywords = '';
 																@foreach($teachers as $t)
 																	@if($t['show'] == 'true')
 																		<button type="button" class="custom-select__selected select_remove_btn_t btn_option_teachers" data-id="{{ $t['id'] }}">
-																			{{ $t['name'] }}	
+																			{{ $t['name'] }}
 																		</button>
 																	@endif
 																@endforeach
@@ -253,7 +253,7 @@ $keywords = '';
 													<label for="filiaSelect" class="label label--required">
 														{{ __('cabinet/organization/course.Filia') }}
 													</label>
-													
+
 													<select required name="filia[]" id="filiaSelect" multiple style="width:100%;">
 														@foreach($filias as $filia)
 														@if($filia['show'] == 'true')
@@ -263,7 +263,7 @@ $keywords = '';
 														@endif;
 														@endforeach
 													</select>
-													
+
 												</div>
 											</div>
 											<div class="edit-information__item edit-information__item--last">
@@ -408,7 +408,7 @@ $keywords = '';
                               								Выбрать фото
                             							</p>
                           							</div> -->
-                          							
+
                           							<label for="gallery_photos_t" class="button load-file__button btn-add-image">
                             							<svg width="27" height="22">
                               								<use xlink:href="#icon-folder"></use>

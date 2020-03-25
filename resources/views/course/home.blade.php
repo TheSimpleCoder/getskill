@@ -30,40 +30,43 @@ $keywords = $_keywords;
         		@if($t)
           			{{ $t }}
           		@else
-          			{{ $title }} 
+          			{{ $title }}
           		@endif
         	</h1>
       	</div>
-      	<section class="categories">
-        	<div class="categories__inner container">
-          		<ul class="categories__list">
-           			@foreach($cats as $ct)
-           				<?php $cat = $ct['cat']; ?>
-	            		<li class="categories__item">
-                            @if($cat_stage_1 == 'all' AND !isset($cat_stage_2) AND !isset($cat_stage_3))
-                                <a href="{{ route('course_catalog_offline', [app()->getLocale(), $cat->slug]) }}" class="categories__link">
-                            @endif
-                            @if(isset($cat_stage_1) AND $cat_stage_1 != 'all' AND !isset($cat_stage_2) AND !isset($cat_stage_3))
-                                <a href="{{ route('course_catalog_offline_stage_2', [app()->getLocale(), $cat_stage_1, $cat->slug]) }}" class="categories__link">
-                            @endif
-                            @if(isset($cat_stage_1) AND isset($cat_stage_2) AND !isset($cat_stage_3))
-                                <a href="{{ route('course_catalog_offline_stage_3', [app()->getLocale(), $cat_stage_1, $cat_stage_2, $cat->slug]) }}" class="categories__link">
-                            @endif
-	                			<span class="categories__icon">
-	                				<img src="/storage/{{ $cat['image'] }}" width="21" height="21">
-	                			</span>
-	                			<span class="categories__title">
-	                  				{{ (App::isLocale('ru'))? $cat->name_ru : $cat->name_uk }}
-	                			</span>
-	                			<span class="categories__count">
-	                  				{{ $ct['count'] }}
-	                			</span>
-	              			</a>
-	            		</li>
-            		@endforeach
-          		</ul>
-        	</div>
-      	</section>
+
+        @if(count($cats) > 0)
+            <section class="categories">
+                <div class="categories__inner container">
+                    <ul class="categories__list">
+                        @foreach($cats as $ct)
+                            <?php $cat = $ct['cat']; ?>
+                            <li class="categories__item">
+                                @if($cat_stage_1 == 'all' AND !isset($cat_stage_2) AND !isset($cat_stage_3))
+                                    <a href="{{ route('course_catalog_offline', [app()->getLocale(), $cat->slug]) }}" class="categories__link">
+                                @endif
+                                @if(isset($cat_stage_1) AND $cat_stage_1 != 'all' AND !isset($cat_stage_2) AND !isset($cat_stage_3))
+                                    <a href="{{ route('course_catalog_offline_stage_2', [app()->getLocale(), $cat_stage_1, $cat->slug]) }}" class="categories__link">
+                                @endif
+                                @if(isset($cat_stage_1) AND isset($cat_stage_2) AND !isset($cat_stage_3))
+                                    <a href="{{ route('course_catalog_offline_stage_3', [app()->getLocale(), $cat_stage_1, $cat_stage_2, $cat->slug]) }}" class="categories__link">
+                                @endif
+                                    <span class="categories__icon">
+                                        <img src="/storage/{{ $cat['image'] }}" width="21" height="21">
+                                    </span>
+                                    <span class="categories__title">
+                                        {{ (App::isLocale('ru'))? $cat->name_ru : $cat->name_uk }}
+                                    </span>
+                                    <span class="categories__count">
+                                        {{ $ct['count'] }}
+                                    </span>
+                                </a>
+                            </li>
+                        @endforeach
+                    </ul>
+                </div>
+            </section>
+        @endif
       	<div class="page-catalog">
         	<div class="container page-catalog__inner">
           		<section class="filter filter--no-js">
@@ -162,7 +165,7 @@ $keywords = $_keywords;
 												<?php endif; ?>
 												@endforeach
 										</select>
-                      					
+
                     				</fieldset>
                     				<fieldset class="filter__item">
                       					<legend>
@@ -430,7 +433,7 @@ $keywords = $_keywords;
                 		</a>
               		</div>
             	</div>
-				
+
             	<ul class="catalog__list catalog__list--vertical" id="list_item_course">
                     @foreach($topCourse as $top)
                   		<li class="catalog__item">
@@ -715,7 +718,7 @@ $keywords = $_keywords;
             	</ul>
                 <div id="morePosts"></div>
                 <div id="category_wrap"></div>
-				
+
 				<?php if(isset($_GET["page"])): ?>
 					<?php if($_GET["page"] != $lists->lastPage()): ?>
 					<button type="button" class="clickMe button catalog__load-more">
@@ -729,7 +732,7 @@ $keywords = $_keywords;
 					</button>
 					<?php endif; ?>
 				<?php endif; ?>
-				
+
             	{{ $lists->appends(request()->input())->links('vendor.pagination.pagination')}}
             	<div class="catalog__seo-text">
               		<div class="catalog__text-wrapper">
@@ -767,7 +770,7 @@ $keywords = $_keywords;
                 type:'GET',
                 url: "{{ route('morePosts', [app()->getLocale(), $id]) }}?page=" + page + "&" + strGET,
             }).done(function(data){
-                
+
                 if(page_count > parseInt(current_page)){
                     $('.pagination__item').removeClass('pagination__item--active');
                     $('.page-link-' + page).addClass('pagination__item--active');

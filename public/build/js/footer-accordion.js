@@ -17,7 +17,7 @@
 
   var onShowMenuClick = function () {
     var currentMenuBlock = this.closest('.site-footer__column').querySelector('.site-footer__menu');
-    currentMenuBlock.classList.toggle('site-footer__menu--open');
+      this.closest('.site-footer__column').querySelector('.site-footer__toggle').classList.toggle('site-footer__toggle--open');
     this.classList.toggle('site-footer__toggle--open');
 
     Array.from(menuItems).forEach(function (item) {

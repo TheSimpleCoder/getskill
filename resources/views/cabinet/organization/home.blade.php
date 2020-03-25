@@ -25,7 +25,7 @@ $keywords = '';
               				<div class="edit-information__inner">
                 				<div class="edit-information__header">
                   					<h2 class="h2">
-                    					{{ __('cabinet/organization/home.name') }} 
+                    					{{ __('cabinet/organization/home.name') }}
                   					</h2>
                   					<div class="edit-information__buttons">
                                         @if($org)
@@ -111,9 +111,9 @@ $keywords = '';
                           							<p class="label label--required">
                             							{{ __('cabinet/organization/home.category') }}
                           							</p>
-													
+
 													<br>
-													
+
 													<select required style="width:100%;" id="selSCatList" multiple="" name="cat-list[]">
 													  <option value="">Категория</option>
 														@foreach($cat_user as $category)
@@ -123,8 +123,8 @@ $keywords = '';
 															<option value="{{ $category['id'] }}">{{ $category['name'] }}</option>
 														@endforeach
 													</select>
-																										
-													
+
+
                         						</div>
                         						<div class="edit-information__input-elements">
                           							<label for="edit_link" class="label">
@@ -141,7 +141,7 @@ $keywords = '';
                             							<div class="dynamic-form__content">
                               								<div class="dynamic-form__header">
                                 								<p class="dynamic-form__name">
-                                  									
+
                                 								</p>
                                 								<div class="dynamic-form__switcher">
                                   									<div class="switcher">
@@ -159,7 +159,7 @@ $keywords = '';
                                     									<use xlink:href="#icon-trash"></use>
                                   									</svg>
                                 								</button>
-                                								<button type="button" class="dynamic-form__toggle" aria-label="Открыть форму">
+                                								<button type="button" class="dynamic-form__toggle plus" aria-label="Открыть форму">
                                   									<span></span>
                                 								</button>
 
@@ -170,7 +170,7 @@ $keywords = '';
                                     									<p class="label">
                                       										{{ __('cabinet/organization/home.city') }}
                                     									</p>
-																		
+
 																		<div id="cSelCopy" style="display:none;">
 																				<select style="width:100%;" required name="regions_1" class="selCityElem_1_copy">
 																				@foreach(\App\Model\Region\Entity\Region::all() as $c)
@@ -179,12 +179,12 @@ $keywords = '';
 																				</select>
 																			</div>
 																			<br>
-																			
+
 																			<select style="width:100%;" required name="regions_1" class="selCityElem_1">
 																				@foreach(\App\Model\Region\Entity\Region::all() as $c)
-																					
+
 																						<option value="{{$c->id}}">{{ app()->getLocale() === 'ru' ? $c->name_ru : $c->name_uk }}</option>
-																					
+
 																				@endforeach
 																			</select>
                                   									</div>
@@ -204,7 +204,7 @@ $keywords = '';
                                     									<input required type="text" name="dynamic-form-phone" class="input input--full-width phone-add-list" id="dynamic_form_phone" data-phone-number="">
                                     									<div class="cloned-input dynamic-form__cloned">
                                       										<ul class="cloned-input__list ul-clone-list-1">
-                                        										
+
                                       										</ul>
                                       										<button type="button" class="cloned-input__add clone-add-phone-number" data-clone="1">
                                         										{{ __('cabinet/organization/home.add_number') }}
@@ -236,7 +236,7 @@ $keywords = '';
                                         										</span>
                                       										</button>
                                       										<div class="select-standard__body list-messenger list-messenger-1">
-                                        										
+
                                       										</div>
                                     									</div>
                                   									</div>
@@ -287,7 +287,7 @@ $keywords = '';
     	                                  									</svg>
     	                                								</button>
                                                                     @endif
-	                                								<button type="button" class="dynamic-form__toggle" aria-label="Открыть форму">
+	                                								<button type="button" class="dynamic-form__toggle plus" aria-label="Открыть форму">
 	                                  									<span></span>
 	                                								</button>
 
@@ -298,7 +298,7 @@ $keywords = '';
 	                                    									<p class="label label--required">
 	                                      										{{ __('cabinet/organization/home.city') }}
 	                                    									</p>
-																			
+
 																			<div id="cSelCopy" style="display:none;">
 																				<select style="width:100%;" required name="regions_{{ $i }}" class="selCityElem_{{ $i }}">
 																				@foreach(\App\Model\Region\Entity\Region::all() as $c)
@@ -307,7 +307,7 @@ $keywords = '';
 																				</select>
 																			</div>
 																			<br>
-																			
+
 																			<select style="width:100%;" required name="regions_{{ $i }}" class="selCityElem_{{ $i }}">
 																				@foreach(\App\Model\Region\Entity\Region::all() as $c)
 																					@if($f->city == $c->id)
@@ -317,7 +317,7 @@ $keywords = '';
 																					@endif
 																				@endforeach
 																			</select>
-																			
+
 	                                  									</div>
 	                                  									<div class="dynamic-form__right-element">
 	                                    									<label for="dynamic_form_address" class="label">
@@ -338,7 +338,7 @@ $keywords = '';
 	                                    									?>
 
 	                                    									<input required type="text" name="dynamic-form-phone" class="input input--full-width phone-add-list" id="dynamic_form_phone" data-phone-number="{{ ($f->phones)? $phone_mass[0] : '' }}" value="{{ ($f->phones)? $phone_mass[0] : '' }}">
-	                                    									<?php 
+	                                    									<?php
 	                                    										unset($phone_mass[0]);
 	                                    									?>
 	                                    									<div class="cloned-input dynamic-form__cloned">
@@ -388,7 +388,7 @@ $keywords = '';
 		                                        										</span>
 		                                      										</button>
 		                                      										<div class="select-standard__body list-messenger list-messenger-{{ $i }}">
-		                                        										
+
 		                                      										</div>
 		                                    									</div>
 		                                  									</div>
@@ -400,10 +400,10 @@ $keywords = '';
 		                                  									</div>
 		                                								</div>
 	                                								@else
-																		
-																	
+
+
 	                                									<?php $mass_m = explode(',', $f->messanger);?>
-																		
+
 	                                									@foreach($mass_m as $m)
 		                                									<?php $data_m = explode(': ', $m); ?>
 		                                									<div class="dynamic-form__elements container-c spawn-method" style="position: relative;">
@@ -421,7 +421,7 @@ $keywords = '';
 			                                        										</span>
 			                                      										</button>
 			                                      										<div class="select-standard__body list-messenger list-messenger-{{ $i }}">
-			                                        										
+
 			                                      										</div>
 			                                    									</div>
 			                                  									</div>
@@ -430,7 +430,7 @@ $keywords = '';
 			                                      										Метод связи
 			                                    									</label>
 			                                    									<input name="dynamic_form_communication_0" class="input input--full-width change-in-messanger-data" placeholder="{{ __('cabinet/organization/home.placeholder') }}" value="{{$data_m[1]}}" data-name="{{$data_m[0]}}" data-data="{{$data_m[1]}}">
-                                                                                    
+
 			                                  									</div>
                                                                                 <button type="button" class="delete cloned-input__delete delete-messanger-data" aria-label="Удалить">
                                                                                     <svg width="17" height="21">
@@ -441,7 +441,7 @@ $keywords = '';
 		                                								@endforeach
 	                                								@endif
 	                                								<div class="spawn-methods spawn-method"></div>
-															
+
 	                                								<input type="hidden" name="messanger_list_data_{{ $i }}" class="messanger_list_data" value="{{ $f->messanger }}">
 	                                								<div class="cloned-input">
 	                              										<button type="button" class="cloned-input__add add-method-c">
@@ -521,7 +521,7 @@ $keywords = '';
                               								Выбрать фото
                             							</p>
                           							</div> -->
-                          							
+
                           							<label for="gallery_photos_t" class="button load-file__button btn-add-image">
                             							<svg width="27" height="22">
                               								<use xlink:href="#icon-folder"></use>

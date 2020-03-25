@@ -45,9 +45,9 @@ $keywords = '';
 	                          		</button>
 	                    		</div>
 	                		</div>
-	                
+
 	              		</div>
-	            
+
 	            		<div class="edit-information__name">
 	                		<div class="edit-information__wrapper-name">
 	                  			<div class="edit-information__input-elements">
@@ -109,7 +109,7 @@ $keywords = '';
 	              	</form>
           		</div>
         	</div>
-			
+
 		</div>
 	</section>
 

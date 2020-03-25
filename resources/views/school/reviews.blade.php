@@ -64,7 +64,7 @@ $keywords = '';
                         						</h6>
                         						<div class="reviews__rating rating">
                         							<?php
-                        								for ($i=0; $i < 5; $i++) { 
+                        								for ($i=0; $i < 5; $i++) {
                         									?>
                         										@if($i < $r->star)
                         											<div class="rating__star rating__star--active">
@@ -84,7 +84,7 @@ $keywords = '';
                         						</span>
                       						</div>
     						                    <!-- this div have extra classes "reviews__option-wrap--open"
-    						                        
+
     						                        <div class="reviews__option-wrap reviews__option-wrap--open">
     						                    -->
                       						<div class="reviews__option-wrap ">
@@ -245,7 +245,8 @@ $keywords = '';
     </div>
     <div class="popup__send-control">
       <a href="#" id="lnktorep"><button type="button" class="button popup__send">
-        Отправить
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="23" viewBox="0 0 24 23"><path d="M8.75,17.612V22.25a.75.75,0,0,0,1.354.444L12.817,19Z" fill="#7835bb"/><path d="M23.685.139A.75.75,0,0,0,22.9.085L.4,11.835a.75.75,0,0,0,.1,1.375l6.255,2.138L20.083,3.958,9.775,16.377,20.258,19.96A.767.767,0,0,0,20.5,20a.749.749,0,0,0,.742-.639l2.75-18.5a.751.751,0,0,0-.307-.722Z" fill="#7835bb"/></svg>
+              Отправить
       </button></a>
       <button type="button" class="popup__cancel">
         Отмена

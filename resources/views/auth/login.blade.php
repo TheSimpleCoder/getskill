@@ -26,7 +26,7 @@ $keywords = '';
             <h2 class="visually-hidden">{{ __('auth/login.Form title') }}</h2>
             <div class="enter__wrapper">
                 <div class="enter__form">
-                    <form method="POST" action="{{ route('login', app()->getLocale()) }}">
+                    <form class="js-form-validation" method="POST" action="{{ route('login', app()->getLocale()) }}">
                         @csrf
                         <div class="form">
                             <p class="form__control">
@@ -60,7 +60,7 @@ $keywords = '';
                                 </a>
                             </p>
                             <p class="form__control form__control--submit">
-                                <button type="submit" class="button button--enter">
+                                <button type="submit" class="disabled button button--enter">
                                     {{ __('auth/login.Enter in your account') }}
                                 </button>
                             </p>

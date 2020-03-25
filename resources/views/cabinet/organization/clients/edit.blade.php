@@ -20,7 +20,7 @@ $keywords = '';
 		<div class="container cabinet__inner">
 			@include('cabinet.organization.layouts.sidebar', ['some' => 'data'])
 
-			
+
 			<div class="cabinet__info-block">
                 <div class="deals deals--clients-edit">
                     <form action="{{ route('cabinet.organization.clients.update', app()->getLocale()) }}" method="POST">
@@ -147,10 +147,10 @@ $keywords = '';
                                 </div>
                             </li>
                         @endforeach
-              
+
                     </ul>
                     <div class="deals__pagination">
-          
+
                     </div>
                 </div>
             </div>

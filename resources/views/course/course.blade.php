@@ -405,7 +405,7 @@
 	                        						</h6>
 	                        						<div class="reviews__rating rating">
 	                        							<?php
-	                        								for ($i=0; $i < 5; $i++) { 
+	                        								for ($i=0; $i < 5; $i++) {
 	                        									?>
 	                        										@if($i <= $r->star)
 	                        											<div class="rating__star rating__star--active">
@@ -425,7 +425,7 @@
 	                        						</span>
 	                      						</div>
 								                    <!-- this div have extra classes "reviews__option-wrap--open"
-								                        
+
 								                        <div class="reviews__option-wrap reviews__option-wrap--open">
 								                    -->
 	                      						<div class="reviews__option-wrap ">
@@ -565,7 +565,7 @@
             		<aside class="another-curse">
               			<div class="about-curse__right">
                   			<div class="school">
-                    
+
                     			<div class="school__about-this-curse">
                       				<span class="popup__button-close"></span>
 
@@ -575,7 +575,7 @@
                             				<img src="{{ $org->url_logo }}" width="244" height="125" alt="{{ (App::isLocale('ru'))? $org->name_ru : $org->name_ua }}">
                           				</picture>
                         			</a>
-                      
+
                       				<p class="school__name">
                         				<a href="{{ route('school_description', ['locale' => app()->getLocale(), 'id' => $org->id]) }}">
                           					{{ (App::isLocale('ru'))? $org->name_ru : $org->name_ua }}
@@ -646,7 +646,7 @@
                       			<span class="button__show-about-curse">{{ (App::isLocale('ru'))? 'Об организации' : 'Про організацію' }}</span>
 
                       			<div class="school__what-numbers">
-                        
+
                         			<span class="button__all-numbers" data-user="{{ $course->user_id }}" data-type="course" data-course="{{ $course->id }}">+38 *** *** ** ** <i>{{ (App::isLocale('ru'))? 'показать' : 'показати' }}</i></span>
                           			<!-- if click "button__all-numbers" this bottom state two classes - "tabs__item--open" or "tabs__item--hidden"  -->
                         			<div class="popup__all-numbers">
@@ -828,7 +828,7 @@
           	</div>
         </div>
     </section>
-	
+
 <section class="popup" id="report">
   <div class="popup__content">
     <h6 class="h6 popup__title">

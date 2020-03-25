@@ -31,7 +31,7 @@ $keywords = '';
 		<div class="container cabinet__inner">
 			@include('cabinet.organization.layouts.sidebar', ['some' => 'data'])
 
-			
+
 			<div class="cabinet__info-block">
                 <div class="deals deals--clients">
                     <div class="deals__top">
@@ -85,16 +85,24 @@ $keywords = '';
                     </ul>
                     <ul class="deals__list">
                         @foreach($clients as $client)
-                            <li class="deals__item" data-name="{{ $client->name }}" data-email="{{ $client->email }}">
-                                <p class="deals__author">
-                                    {{ $client->name }}
-                                </p>
-                                <p class="deals__phone">
-                                    {{ $client->phone }}
-                                </p>
-                                <div class="deal__email">
-                                    {{ $client->email }}
+                            <li class="deals__item custom-deals" data-name="{{ $client->name }}" data-email="{{ $client->email }}">
+                                <div class="deals__sort-item--name">
+                                    <p class="deals__author">
+                                        {{ $client->name }}
+                                    </p>
                                 </div>
+                                <div class="deals__sort-item--date">
+                                    <p class="deals__phone">
+                                        {{ $client->phone }}
+                                    </p>
+                                </div>
+
+                                <div class="deals__sort-item--status">
+                                    <p class="deal__email">
+                                        {{ $client->email }}
+                                    </p>
+                                </div>
+
                                 <div class="action-circle action-circle--open deal__action">
                                     <button type="button" class="action-circle__toggle" aria-label="Открыть меню">
                                         <span></span>
