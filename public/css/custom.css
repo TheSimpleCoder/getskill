@@ -387,12 +387,20 @@ body.fixed {
         left: 0;
     }
 
+    .menu-cabinet .menu-cabinet__prev svg, .tabs__list .menu-cabinet__prev svg {
+        transform: rotate(90deg)
+    }
+
     .menu-cabinet, .tabs__list {
         position: relative;
     }
 
     .menu-cabinet .menu-cabinet__next, .tabs__list .menu-cabinet__next {
         right: 0;
+    }
+
+    .menu-cabinet .menu-cabinet__next svg, .tabs__list .menu-cabinet__next svg {
+        transform: rotate(-90deg)
     }
 }
 
