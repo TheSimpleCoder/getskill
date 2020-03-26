@@ -32,7 +32,7 @@ $keywords = '';
 								</h2>
 								@if($org)
 									<div class="edit-information__buttons">
-										<button type="submit" class="button button--save button--green">
+										<button type="submit" class="button button--save button--green disabled">
 											<svg width="20" height="21">
 												<use xlink:href="#icon-save"></use>
 											</svg>
@@ -159,7 +159,7 @@ $keywords = '';
 															@endif
 														@endforeach
 													</select>
-													
+
 													<style>
 													span.select2-selection.select2-selection--single{
 														height: 45px;
@@ -198,7 +198,7 @@ $keywords = '';
 																			case 1:
 																				echo '€';
 																				break;
-																			
+
 																		}
 																	?>
 																</span>
@@ -332,7 +332,7 @@ $keywords = '';
 													</p>
 													<div class="custom-select select_class">
 														<div class="custom-select__header result_btn_t" tabindex="0">
-															
+
 															<span class="custom-select__toggle-icon select_btn close" aria-label="Открыть категорию">
 																<svg width="13" height="7">
 																	<use xlink:href="#icon-arrow"></use>
@@ -342,7 +342,7 @@ $keywords = '';
 																@foreach($teachers as $t)
 																	@if($t['show'] == 'true')
 																		<button type="button" class="custom-select__selected select_remove_btn_t btn_option_teachers" data-id="{{ $t['id'] }}">
-																			{{ $t['name'] }}	
+																			{{ $t['name'] }}
 																		</button>
 																	@endif
 																@endforeach
@@ -366,7 +366,7 @@ $keywords = '';
 												</div>
 												<div class="edit-information__input-elements">
 													<p class="label">
-														{{ __('cabinet/organization/course.Filia') }} 
+														{{ __('cabinet/organization/course.Filia') }}
 													</p>
 													<div class="custom-select select_class">
 														<div class="custom-select__header result_btn_f" tabindex="0">
@@ -375,12 +375,12 @@ $keywords = '';
 																	<use xlink:href="#icon-arrow"></use>
 																</svg>
 															</span>
-															@if($course->filia)					
-															
+															@if($course->filia)
+
 																@foreach($filias as $filia)
 																	@if($filia['show'] == 'true')
 																		<button type="button" class="custom-select__selected select_remove_btn btn_option_filia" data-id="{{ $filia['id'] }}">
-																			{{ $filia['name'] }}	
+																			{{ $filia['name'] }}
 																		</button>
 																	@endif
 																@endforeach
@@ -590,7 +590,7 @@ $keywords = '';
                               								Выбрать фото
                             							</p>
                           							</div> -->
-                          							
+
                           							<label for="gallery_photos_t" class="button load-file__button btn-add-image">
                             							<svg width="27" height="22">
                               								<use xlink:href="#icon-folder"></use>

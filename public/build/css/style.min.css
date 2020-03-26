@@ -11204,8 +11204,8 @@ input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-se
     background-image: linear-gradient(to right, #abcdff 33.3%, #fa0 33.3%, #fa0 66.6%, #0b9f2e 66.6%);
 }
 .underline-select--new .underline-select__toggle::after {
-    background-image: none;
-    background-color: #abcdff;
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(33.3%, #abcdff), color-stop(33.3%, #d8d8d8), color-stop(100%, #d8d8d8));
+    background-image: linear-gradient(to right, #abcdff 33.3%, #d8d8d8 33.3%, #d8d8d8 100%);
 }
 .underline-select__content {
     display: none;

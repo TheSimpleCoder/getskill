@@ -32,7 +32,7 @@ $keywords = '';
 								</h2>
 								@if($org)
 									<div class="edit-information__buttons">
-										<button type="submit" class="button button--save button--green">
+										<button type="submit" class="disabled button button--save button--green">
 											<svg width="20" height="21">
 												<use xlink:href="#icon-save"></use>
 											</svg>
@@ -104,13 +104,13 @@ $keywords = '';
 													<p class="label label--required">
 														{{ __('cabinet/organization/course.Category') }}
 													</p>
-													
+
 													<select required style="width:100%;" id="selSCatList" name="category">
 														@foreach($cat as $c)
 															<option value="{{ $c['id'] }}">{{ $c['name'] }}</option>
 														@endforeach
 													</select>
-													
+
 												</div>
 											</div>
 											<div class="edit-information__item">
@@ -161,7 +161,7 @@ $keywords = '';
 															{{ (App::isLocale('ru'))? 'Дата проведения' : 'Дата проведення' }}
 														</p>
 														<div class="select-standard select-standard--without-search course_select_1">
-															<input required type="date" name="date" class="course_type" class="input input--full-width">
+															<input required type="date" name="date" class="course_type input input--full-width">
 														</div>
 													</div>
 												</div>
@@ -221,20 +221,20 @@ $keywords = '';
 													</div>
 												</div>
 												<div class="edit-information__input-elements">
-													
-													
+
+
 													<label for="filiaSelect" class="label label--required">
 														{{ __('cabinet/organization/course.Filia') }}
 													</label>
-													
+
 													<br>
-													
+
 													<select required name="filia[]" id="filiaSelect" multiple style="width:100%;">
 														@foreach($filias as $filia)
 														<option value="{{ $filia['id'] }}">{{ $filia['name'] }}</option>
 														@endforeach
 													</select>
-													
+
 												</div>
 											</div>
 											<div class="edit-information__item edit-information__item--last">
@@ -366,7 +366,7 @@ $keywords = '';
                               								Выбрать фото
                             							</p>
                           							</div> -->
-                          							
+
                           							<label for="gallery_photos_t" class="button load-file__button btn-add-image">
                             							<svg width="27" height="22">
                               								<use xlink:href="#icon-folder"></use>

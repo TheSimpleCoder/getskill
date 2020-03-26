@@ -828,7 +828,7 @@ $('.js-form-validation').each(function() {
         return isFilled;
     }
 
-    $(form).on('input', ':input', function(e) {
+    $(form).on('blur  input', ':input', function(e) {
         var isFilled = checkInputs(form);
 
         if (isFilled) {
@@ -838,8 +838,17 @@ $('.js-form-validation').each(function() {
         }
     });
 
-    checkInputs(form);
 })
+
+
+$('#add_curse_organization').find(':input').on('input', function() {
+    $('#add_curse_organization').find('.button.button--cabinet-submit.button--save.button--green.button--fixed.show-mobile').addClass('visible');
+});
+
+
+$('form').find(':input').on('input', function() {
+    $(this).closest('form').find('.button.button--save.disabled').removeClass('disabled');
+});
 
 
 /*****************************************/
@@ -1169,8 +1178,6 @@ $('.status_option').click(function(){
 	$('.input_status').val(id);
 	$('.status_val').html(status);
 });
-
-$("<style type='text/css'> .filter__content:before{ content:'';display:table;clear:both;}</style>").appendTo("head");
 
 if ($('.underline-select').length) {
     var id = parseInt($('.input_status').val(), 10);

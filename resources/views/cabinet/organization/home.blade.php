@@ -36,7 +36,7 @@ $keywords = '';
                           						{{ __('cabinet/organization/home.btn_view') }}
                         					</a>
                                         @endif
-                    					<button type="submit" class="button button--save button--green">
+                    					<button type="submit" class="disabled button button--save button--green">
                       						<svg width="20" height="21">
                         						<use xlink:href="#icon-save"></use>
                       						</svg>

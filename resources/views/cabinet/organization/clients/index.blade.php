@@ -83,7 +83,7 @@ $keywords = '';
                             </a>
                         </li>
                     </ul>
-                    <ul class="deals__list">
+                    <ul class="deals__list custom-deals__list">
                         @foreach($clients as $client)
                             <li class="deals__item custom-deals" data-name="{{ $client->name }}" data-email="{{ $client->email }}">
                                 <div class="deals__sort-item--name">

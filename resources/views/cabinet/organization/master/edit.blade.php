@@ -32,7 +32,7 @@ $keywords = '';
 								</h2>
 								@if($org)
 									<div class="edit-information__buttons">
-										<button type="submit" class="button button--save button--green">
+										<button type="submit" class="disabled button button--save button--green">
 											<svg width="20" height="21">
 												<use xlink:href="#icon-save"></use>
 											</svg>

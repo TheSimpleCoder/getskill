@@ -353,9 +353,12 @@ span.select2-selection__rendered
                       <span class="like__count">{{ Favorite::countAuth() }}</span>
                     @endguest
                 </a>
-                <div class="search">
+                <div class="search search-mobile">
                     <form method="get" action="{{ route('search_page', app()->getLocale()) }}" autocomplete="off" style="position: relative;">
                       @csrf
+                      <button type="button" class="js-search-close search-mobile__close">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="17.946" height="6" viewBox="0 0 17.946 6"><g transform="translate(0 0)"><path d="M5.8,2.836,3.471.219a.617.617,0,0,0-.943,0L.2,2.836a.813.813,0,0,0,0,1.057.617.617,0,0,0,.943,0l1.2-1.341V17.2A.711.711,0,0,0,3,17.946a.711.711,0,0,0,.667-.748V2.553l1.2,1.341a.617.617,0,0,0,.943,0,.813.813,0,0,0,0-1.057Z" transform="translate(0 6) rotate(-90)" fill="#d8d8d8"/></g></svg>
+                      </button>
                       <input type="hidden" name="filter_course_online" value="1">
                       <input type="hidden" name="filter_course_offline" value="2">
                       <input type="hidden" name="filter_course_master" value="3">
@@ -368,7 +371,7 @@ span.select2-selection__rendered
                         </svg>
                       </button>
                       <input type="search" name="search" class="input input--search" placeholder="{{ (App::isLocale('ru'))? 'Я ищу' : 'Я шукаю' }}..." id="search" data-lang="{{ App::getLocale() }}">
-                      <div class="result-search">
+                      <div class="result-search search-mobile__result">
 
                       </div>
                     </form>

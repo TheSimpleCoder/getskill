@@ -54,7 +54,7 @@ $keywords = '';
 	                            				</div>
 	                            				<div class="reviews__rating rating">
 	                            					<?php
-	                            						for ($i=0; $i < 5; $i++) { 
+	                            						for ($i=0; $i < 5; $i++) {
 	                            							?>
 	                            								<div class="rating__star rating__star--active">
 				                                					<svg width="13" height="13">
@@ -78,7 +78,7 @@ $keywords = '';
 	                            				<div class="reviews__option-dropdown">
 	                            					<a href="{{ route('course_add_review_complain', ['locale' => app()->getLocale()]) }}?id={{ $rate->id }}">
 	                              						<span class="reviews__report">
-	                                					
+
                       										{{ (App::isLocale('ru'))? 'Пожаловатся' : 'Поскаржитися' }}
 	                              						</span>
 	                              					</a>
@@ -186,7 +186,7 @@ $keywords = '';
 	                            						</svg>
 	                            						Редактировать
 	                          						</button>
-	                          						<button type="submit" class="button button--save button--green" style="display: none;">
+	                          						<button type="submit" class="disabled button button--save button--green" style="display: none;">
 														<svg width="20" height="21">
 															<use xlink:href="#icon-save"></use>
 														</svg>

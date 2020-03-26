@@ -30,7 +30,7 @@ $keywords = $_keywords;
                 @if($t)
                     {{ $t }}
                 @else
-                    {{ $title }} 
+                    {{ $title }}
                 @endif
             </h1>
         </div>
@@ -463,7 +463,7 @@ $keywords = $_keywords;
                                                                 break;
                                                             default:
                                                                 $text = 'По рейтингу';
-                                                                $icon = 'icon-arrow';
+                                                                $icon = 'icon-star-yellow';
                                                                 break;
                                                         }
                                                     ?>
@@ -762,7 +762,7 @@ $keywords = $_keywords;
             }).done(function(data){
                 console.log(data);
 
-                
+
                 if(page_count > parseInt(current_page)){
                     $('.pagination__item').removeClass('pagination__item--active');
                     $('.page-link-' + page).addClass('pagination__item--active');

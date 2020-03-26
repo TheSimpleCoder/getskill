@@ -51,7 +51,7 @@ $keywords = '';
 	                          		</button>
 	                    		</div>
 {{--                                remove class visible - button will hide --}}
-                                <button type="submit" class="button button--cabinet-submit button--save button--green button--fixed show-mobile visible">
+                                <button type="submit" class="button button--cabinet-submit button--save button--green button--fixed show-mobile">
                                     <svg width="20" height="21">
                                         <use xlink:href="#icon-save"></use>
                                     </svg>
