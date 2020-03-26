@@ -375,8 +375,8 @@ body.fixed {
         z-index: 2;
         border: 0;
         background-color: transparent;
-        width: 30px;
-        height: 30px;
+        /*width: 30px;*/
+        /*height: 30px;*/
         display: inline-flex;
         align-items: center;
         justify-content: center;
