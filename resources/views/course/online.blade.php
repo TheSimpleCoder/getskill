@@ -30,7 +30,7 @@ $keywords = $_keywords;
         		@if($t)
           			{{ (App::isLocale('ru'))? $t . ' в онлайне' : $t . ' в онлайнi'}}
           		@else
-          			{{ $title }} 
+          			{{ $title }}
           		@endif
         	</h1>
       	</div>
@@ -309,7 +309,7 @@ $keywords = $_keywords;
                                                             break;
                                                         default:
                                                             $text = 'По рейтингу';
-                                                            $icon = 'icon-arrow';
+                                                            $icon = 'icon-star-yellow';
                                                             break;
                                                     }
                                                 ?>
@@ -737,7 +737,7 @@ $keywords = $_keywords;
 					</button>-->
 					<?php endif; ?>
 				<?php endif; ?>
-				
+
                 {{ $lists->appends(request()->input())->links('vendor.pagination.pagination')}}
                 <div class="catalog__seo-text">
                     <div class="catalog__text-wrapper">
@@ -774,7 +774,7 @@ $keywords = $_keywords;
                 type:'GET',
                 url: "{{ route('morePosts', [app()->getLocale(), $id]) }}?page=" + page + "&" + strGET,
             }).done(function(data){
-                
+
                 if(page_count > parseInt(current_page)){
                     $('.pagination__item').removeClass('pagination__item--active');
                     $('.page-link-' + page).addClass('pagination__item--active');

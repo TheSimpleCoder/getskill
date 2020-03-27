@@ -62,6 +62,10 @@
     margin-bottom: 40px;
 }
 
+a:hover {
+    color: #7835bb;
+}
+
 .comment__item.comment__item--active .comment__text {
     display: none;
 }

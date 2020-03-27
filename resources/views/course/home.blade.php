@@ -300,7 +300,7 @@ $keywords = $_keywords;
                                                             break;
                                                         default:
                                                             $text = 'По рейтингу';
-                                                            $icon = 'icon-arrow';
+                                                            $icon = 'icon-star-yellow';
                                                             break;
                                                     }
                                                 ?>

@@ -269,7 +269,7 @@ $keywords = '';
                                                             break;
                                                         default:
                                                             $text = 'За рейтингом';
-                                                            $icon = 'icon-arrow';
+                                                            $icon = 'icon-star-yellow';
                                                             break;
                                                     }
                                                 ?>
