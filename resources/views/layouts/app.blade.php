@@ -121,7 +121,7 @@ span.select2-selection__rendered
 <div class="wrapper">
     <header>
         <nav class="navigation navigation--no-js">
-            <div class="mobile-menu" style="left: -315px">
+            <div class="mobile-menu" style="left: -315px; display: none;">
                 <div class="mobile-menu__header">
                     <div class="logo logo--mobile-menu">
                         <a href="{{ route('home', app()->getLocale()) }}" class="logo__link">

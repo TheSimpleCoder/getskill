@@ -3106,10 +3106,12 @@ input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-se
     border-radius: 3px;
 }
 @media (max-width:991px) {
+
     .mobile-menu--open {
     left: 0 !important;
     overflow-y: auto;
     height: 100%;
+    display: block !important;
     min-height: 100%;
     -webkit-transform: translateX(0);
     transform: translateX(0);
