@@ -37,11 +37,17 @@ $keywords = '';
                 <div class="cabinet__page-name">
                     <h2 class="h2">{{ $title }}</h2>
                     <div class="cabinet__submit cabinet__submit--hidden">
-                        <button type="submit" class="button button--cabinet-submit button--save button--green">
+                        <button type="submit" class="button disabled button--cabinet-submit button--save button--green">
                             <svg width="20" height="21"><use xlink:href="#icon-save"></use></svg>
                             {{ __('cabinet/person/profile/home.Save') }}
                         </button>
                     </div>
+                    <button type="submit" class="button disabled button--cabinet-submit button--save button--green button--fixed show-mobile">
+                        <svg width="20" height="21">
+                            <use xlink:href="#icon-save"></use>
+                        </svg>
+                        Сохранить
+                    </button>
                 </div>
                 <div class="cabinet__item cabinet__item--avatar">
                 @if(!$user->getImageUrl())

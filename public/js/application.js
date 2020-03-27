@@ -841,14 +841,20 @@ $('.js-form-validation').each(function() {
 })
 
 
-$('#add_curse_organization').find(':input').on('input', function() {
-    $('#add_curse_organization').find('.button.button--cabinet-submit.button--save.button--green.button--fixed.show-mobile').addClass('visible');
-});
+
 
 
 $('form').find(':input').on('input', function() {
-    $(this).closest('form').find('.button.button--save.disabled').removeClass('disabled');
+    $(this).closest('form').find('.button.disabled').removeClass('disabled');
+    $(this).closest('form').find('.button.button--cabinet-submit.button--save.button--green.button--fixed.show-mobile').addClass('visible');
 });
+
+
+$('form').find('.underline-select__option').on('click', function() {
+    $(this).closest('form').find('.button.disabled').removeClass('disabled');
+    $(this).closest('form').find('.button.button--cabinet-submit.button--save.button--green.button--fixed.show-mobile').addClass('visible');
+});
+
 
 
 /*****************************************/

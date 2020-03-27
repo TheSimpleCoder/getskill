@@ -42,6 +42,12 @@ $keywords = '';
                       						</svg>
                       						{{ __('cabinet/organization/home.btn_save') }}
                     					</button>
+                                            <button type="submit" class="button disabled button--cabinet-submit button--save button--green button--fixed show-mobile">
+                                                <svg width="20" height="21">
+                                                    <use xlink:href="#icon-save"></use>
+                                                </svg>
+                                                Сохранить
+                                            </button>
                   					</div>
                 				</div>
                 				<div class="tabs edit-information__tabs">

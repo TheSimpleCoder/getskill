@@ -43,15 +43,21 @@ $keywords = '';
                             			</svg>
                             			Удалить
                           			</button>
-	                        		<button type="submit" class="button hide-mobile button--cabinet-submit button--save button--green">
+	                        		<button type="submit" class="button disabled hide-mobile button--cabinet-submit button--save button--green">
 	                            		<svg width="20" height="21">
 	                              			<use xlink:href="#icon-save"></use>
 	                            		</svg>
 	                            		Сохранить
 	                          		</button>
+                                    <button type="submit" class="button disabled button--cabinet-submit button--save button--green button--fixed show-mobile">
+                                        <svg width="20" height="21">
+                                            <use xlink:href="#icon-save"></use>
+                                        </svg>
+                                        Сохранить
+                                    </button>
 	                    		</div>
-{{--                                remove class visible - button will hide --}}
-                                <button type="submit" class="button button--cabinet-submit button--save button--green button--fixed show-mobile">
+
+                                <button type="submit" class="button disabled button--cabinet-submit button--save button--green button--fixed show-mobile">
                                     <svg width="20" height="21">
                                         <use xlink:href="#icon-save"></use>
                                     </svg>

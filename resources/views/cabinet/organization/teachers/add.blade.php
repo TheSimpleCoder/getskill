@@ -37,13 +37,19 @@ $keywords = '';
 	                    		</button>
 	                    		<div class="reviews__option-dropdown">
 
-	                        		<button type="submit" class="button button--cabinet-submit button--save button--green">
+	                        		<button type="submit" class="button button--cabinet-submit disabled button--save button--green">
 	                            		<svg width="20" height="21">
 	                              			<use xlink:href="#icon-save"></use>
 	                            		</svg>
 	                            		{{ (App::isLocale('ru'))? 'Сохранить' : 'Зберегти' }}
 	                          		</button>
 	                    		</div>
+                                <button type="submit" class="button disabled button--cabinet-submit button--save button--green button--fixed show-mobile">
+                                    <svg width="20" height="21">
+                                        <use xlink:href="#icon-save"></use>
+                                    </svg>
+                                    Сохранить
+                                </button>
 	                		</div>
 
 	              		</div>

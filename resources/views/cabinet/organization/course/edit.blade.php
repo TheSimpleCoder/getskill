@@ -32,13 +32,19 @@ $keywords = '';
 								</h2>
 								@if($org)
 									<div class="edit-information__buttons">
-										<button type="submit" class="button button--save button--green disabled">
+										<button type="submit" class="disabled button button--save button--green disabled">
 											<svg width="20" height="21">
 												<use xlink:href="#icon-save"></use>
 											</svg>
 											{{ __('cabinet/organization/course.Save') }}
 										</button>
 									</div>
+                                    <button type="submit" class="button disabled button--cabinet-submit button--save button--green button--fixed show-mobile">
+                                        <svg width="20" height="21">
+                                            <use xlink:href="#icon-save"></use>
+                                        </svg>
+                                        Сохранить
+                                    </button>
 								@endif
 							</div>
 							@if($org)
