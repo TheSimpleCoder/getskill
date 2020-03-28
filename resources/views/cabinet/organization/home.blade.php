@@ -293,7 +293,7 @@ $keywords = '';
     	                                  									</svg>
     	                                								</button>
                                                                     @endif
-	                                								<button type="button" class="dynamic-form__toggle plus" aria-label="Открыть форму">
+	                                								<button type="button" class="dynamic-form__toggle" aria-label="Открыть форму">
 	                                  									<span></span>
 	                                								</button>
 
