@@ -24,14 +24,16 @@
     <link rel="preload" href="{{ asset('build/fonts/Roboto-Medium.woff2') }}" as="font" type="font/woff2"
           crossorigin="anonymous">
 
-    <link rel="stylesheet" href="{{ asset('Semantic-UI/semantic.min.css')}}" />
-    <link rel="stylesheet" href="{{ asset('build/css/style.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('css/style.css')}}">
-    <link rel="stylesheet" href="{{ asset('css/dropzone.css')}}">
-    <link rel="stylesheet" href="{{ asset('css/jquery.datetimepicker.min.css')}}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
-	<link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="{{ asset('css/custom.css')}}">
+        <link rel="stylesheet" href="{{ asset('css/main.min.css')}}">
+
+{{--    <link rel="stylesheet" href="{{ asset('Semantic-UI/semantic.min.css')}}" />--}}
+{{--    <link rel="stylesheet" href="{{ asset('build/css/style.min.css')}}">--}}
+{{--    <link rel="stylesheet" href="{{ asset('css/style.css')}}">--}}
+{{--    <link rel="stylesheet" href="{{ asset('css/custom.css')}}">--}}
+{{--    <link rel="stylesheet" href="{{ asset('css/dropzone.css')}}">--}}
+{{--    <link rel="stylesheet" href="{{ asset('css/jquery.datetimepicker.min.css')}}">--}}
+{{--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />--}}
+{{--    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />--}}
 
 
     <script data-ad-client="ca-pub-1571705245948685" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -528,31 +530,33 @@ span.select2-selection__rendered
         </div>
     </footer>
 </div>
-<script src="{{ asset('build/js/scripts.min.js')}}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="{{ asset('js/build.min.js')}}"></script>
+{{--<script src="{{ asset('build/js/scripts.min.js')}}"></script>--}}
 @include('sweetalert::alert')
 <!-- <script src="{{ mix('js/app.js', 'build') }}"></script> -->
 @yield('scripts')
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="{{ asset('js/application.js')}}"></script>
-<script src="{{ asset('js/dropzone.js')}}"></script>
-<script src="{{ asset('js/jquery.datetimepicker.full.min.js')}}"></script>
-<script src="{{ asset('build/js/catalog.js')}}"></script>
-<script src="{{ asset('build/js/footer-accordion.js')}}"></script>
-<script src="{{ asset('build/js/menu.js')}}"></script>
-<script src="{{ asset('build/js/sorting.js')}}"></script>
-<script src="{{ asset('js/jquery.maskedinput.min.js')}}"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script src="{{ asset('js/nouislider.js')}}"></script>
-<script src="{{ asset('js/range-slider.js')}}"></script>
-<script src="{{ asset('build/js/slick.js')}}"></script>
-<script src="{{ asset('build/js/slider.js')}}"></script>
-<script src="{{ asset('build/js/lazyload.min.js')}}"></script>
+
+{{--<script src="{{ asset('js/application.js')}}"></script>--}}
+{{--<script src="{{ asset('js/dropzone.js')}}"></script>--}}
+{{--<script src="{{ asset('js/jquery.datetimepicker.full.min.js')}}"></script>--}}
+{{--<script src="{{ asset('build/js/catalog.js')}}"></script>--}}
+{{--<script src="{{ asset('build/js/footer-accordion.js')}}"></script>--}}
+{{--<script src="{{ asset('build/js/menu.js')}}"></script>--}}
+{{--<script src="{{ asset('build/js/sorting.js')}}"></script>--}}
+{{--<script src="{{ asset('js/jquery.maskedinput.min.js')}}"></script>--}}
+{{--<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>--}}
+{{--<script src="{{ asset('js/nouislider.js')}}"></script>--}}
+{{--<script src="{{ asset('js/range-slider.js')}}"></script>--}}
+{{--<script src="{{ asset('build/js/slick.js')}}"></script>--}}
+{{--<script src="{{ asset('build/js/slider.js')}}"></script>--}}
+{{--<script src="{{ asset('build/js/lazyload.min.js')}}"></script>--}}
 <!-- <script src="{{ asset('build/js/jquery.mCustomScrollbar.concat.min.js')}}"></script> -->
-<script src="{{ asset('build/js/common.js')}}"></script>
-<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-<script src="{{ asset('Semantic-UI/semantic.min.js')}}"></script>
-<script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
-<script src="{{ asset('build/js/seo-text.js')}}"></script>
+{{--<script src="{{ asset('build/js/common.js')}}"></script>--}}
+{{--<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>--}}
+{{--<script src="{{ asset('Semantic-UI/semantic.min.js')}}"></script>--}}
+{{--<script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>--}}
+{{--<script src="{{ asset('build/js/seo-text.js')}}"></script>--}}
 <script src="https://www.google.com/recaptcha/api.js?render=6LdCLeIUAAAAAAj9QgCu-f_KZCL3nlcyM-Ql0aLa"></script>
 <script>
 	grecaptcha.ready(function() {
@@ -563,97 +567,98 @@ span.select2-selection__rendered
 	});
 </script>
 
+
 <script>
-function matchCustom(params, data) {
-    // If there are no search terms, return all of the data
-    if ($.trim(params.term) === '') {
-      return data;
-    }
-
-    // Do not display the item if there is no 'text' property
-    if (typeof data.text === 'undefined') {
-      return null;
-    }
-
-    // `params.term` should be the term that is used for searching
-    // `data.text` is the text that is displayed for the data object
-    if (data.text.toLowerCase().indexOf(params.term.toLowerCase()) > -1) {
-      var modifiedData = $.extend({}, data, true);
-
-      // You can return modified objects from here
-      // This includes matching the `children` how you want in nested data sets
-      return modifiedData;
-    }
-
-    // Return `null` if the term should not be displayed
-    return null;
-}
-
-$("select.cityFilter").select2({
-	language: "ru",
-	matcher: matchCustom
-});
-$("select.selCatCourse").select2({
-	language: "ru",
-	matcher: matchCustom
-});
-
-$('select#selSCatList').select2({
-	matcher: matchCustom,
-	placeholder: "Выберите из списка",
-});
-
-$('select#filiaSelect').select2({
-	matcher: matchCustom,
-	placeholder: "Выберите из списка",
-});
-
-$('select.selCityElem_1').select2({
-	matcher: matchCustom,
-	placeholder: "Выберите из списка",
-});
-
-$("select.cityFilter").change(function(){
-	$('.send_filter').trigger('click');
-});
-
-
-$("a.popup-call").on("click", function(){
-	var lnk = $(this).attr('lnk');
-	$('a#lnktorep').attr('href', lnk);
-	$('section#report').attr('class', 'popup popup--open');
-});
-$("button.popup__cancel").on("click", function(){
-
-	$('section#report').attr('class', 'popup');
-});
+// function matchCustom(params, data) {
+//     // If there are no search terms, return all of the data
+//     if ($.trim(params.term) === '') {
+//       return data;
+//     }
+//
+//     // Do not display the item if there is no 'text' property
+//     if (typeof data.text === 'undefined') {
+//       return null;
+//     }
+//
+//     // `params.term` should be the term that is used for searching
+//     // `data.text` is the text that is displayed for the data object
+//     if (data.text.toLowerCase().indexOf(params.term.toLowerCase()) > -1) {
+//       var modifiedData = $.extend({}, data, true);
+//
+//       // You can return modified objects from here
+//       // This includes matching the `children` how you want in nested data sets
+//       return modifiedData;
+//     }
+//
+//     // Return `null` if the term should not be displayed
+//     return null;
+// }
+//
+// $("select.cityFilter").select2({
+// 	language: "ru",
+// 	matcher: matchCustom
+// });
+// $("select.selCatCourse").select2({
+// 	language: "ru",
+// 	matcher: matchCustom
+// });
+//
+// $('select#selSCatList').select2({
+// 	matcher: matchCustom,
+// 	placeholder: "Выберите из списка",
+// });
+//
+// $('select#filiaSelect').select2({
+// 	matcher: matchCustom,
+// 	placeholder: "Выберите из списка",
+// });
+//
+// $('select.selCityElem_1').select2({
+// 	matcher: matchCustom,
+// 	placeholder: "Выберите из списка",
+// });
+//
+// $("select.cityFilter").change(function(){
+// 	$('.send_filter').trigger('click');
+// });
+//
+//
+// $("a.popup-call").on("click", function(){
+// 	var lnk = $(this).attr('lnk');
+// 	$('a#lnktorep').attr('href', lnk);
+// 	$('section#report').attr('class', 'popup popup--open');
+// });
+// $("button.popup__cancel").on("click", function(){
+//
+// 	$('section#report').attr('class', 'popup');
+// });
 </script>
 
 <script>
-	$("#selS").dropdown();
+	// $("#selS").dropdown();
 	// $('.checkbox__label').on('click', function(){
 		// $(this).parent().search('input').prop("checked", true);
 		// $('.send_filter').trigger('click');
 	// });
 </script>
 <script>
-  $(function() {
-    $( "#gallery_response" ).sortable();
-    $( "#gallery_response" ).disableSelection();
-    });
-
-	$('.ui.dropdown').dropdown();
-	$('.cityFilter').dropdown({
- onChange: function() {
-	$('.send_filter').trigger('click');
- }
-});
+//   $(function() {
+//     $( "#gallery_response" ).sortable();
+//     $( "#gallery_response" ).disableSelection();
+//     });
+//
+// 	$('.ui.dropdown').dropdown();
+// 	$('.cityFilter').dropdown({
+//  onChange: function() {
+// 	$('.send_filter').trigger('click');
+//  }
+// });
 </script>
 
 <script type="text/javascript">
-  $(function(){
-    $(".phone-mask").mask("+380 (99) 999-99-99");
-  });
+  // $(function(){
+  //   $(".phone-mask").mask("+380 (99) 999-99-99");
+  // });
 </script>
 
 @guest
